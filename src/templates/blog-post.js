@@ -4,14 +4,25 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
+import * as S from "../components/Post/styled"
+
 const BlogPost = ({ data }) => {
-  const post = data.markdownRemark
+  const { title, description, date } = data.markdownRemark.frontmatter
+  const { timeToRead, html } = data.markdownRemark
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <SEO title={title} />
+      <S.PostHeader>
+        <S.PostDate>
+          {date} • {timeToRead} min de leitura
+        </S.PostDate>
+        <S.PostTitle>{title}</S.PostTitle>
+        <S.PostDescription>{description}</S.PostDescription>
+      </S.PostHeader>
+      <S.MainContent>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      </S.MainContent>
     </Layout>
   )
 }
@@ -21,8 +32,11 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
+        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
       }
       html
+      timeToRead
     }
   }
 `
