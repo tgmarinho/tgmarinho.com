@@ -1,14 +1,18 @@
+require("dotenv").config()
+
+const queries = require("./src/utils/algolia_queries")
+
 module.exports = {
   siteMetadata: {
-    title: `Thiago Marinho`,
-    position: `Software Developer`,
-    description: `Blog about Software Development and others stuffs`,
-    author: `@tgmarinho`,
+    title: `John Doe`,
+    position: `Backend Developer`,
+    description: `A blog about backend development and other cool stuff.`,
+    author: `@myblog`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    // needs to be the first config to work with gatsby-remark-images
+    // needs to be the first to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,17 +47,28 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: "960",
-              linksImagesToOriginal: false,
+              maxWidth: 960,
+              linkImagesToOriginal: false,
             },
           },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-prismjs`, // shoulbe the last plugin configured
+          `gatsby-remark-prismjs`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-algolia-search`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        queries,
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
