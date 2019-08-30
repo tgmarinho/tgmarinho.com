@@ -73,8 +73,8 @@ exports.createPages = ({ graphql, actions }) => {
           // Data passed to context is available
           // in page queries as GraphQL variables
           slug: node.fields.slug,
-          previuosPost: next,
-          nextPost: previous,
+          previousPost: previous,
+          nextPost: next,
         },
       })
     })
