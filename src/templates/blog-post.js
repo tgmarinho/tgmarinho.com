@@ -9,14 +9,14 @@ import Comments from "../components/Comments"
 import * as S from "../components/Post/styled"
 
 const BlogPost = ({ data, pageContext }) => {
-  const { title, description, date } = data.markdownRemark.frontmatter
+  const { title, description, date, image } = data.markdownRemark.frontmatter
   const { timeToRead, html, fields } = data.markdownRemark
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description} image={image} />
       <S.PostHeader>
         <S.PostDate>
           {date} • {timeToRead} min de leitura
@@ -43,6 +43,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image
       }
       html
       timeToRead

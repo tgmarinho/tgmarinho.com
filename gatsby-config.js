@@ -4,10 +4,11 @@ const queries = require("./src/utils/algolia_queries")
 
 module.exports = {
   siteMetadata: {
-    title: `John Doe`,
-    position: `Backend Developer`,
+    title: `Thiago Marinho`,
+    position: `Software Developer`,
     description: `A blog about backend development and other cool stuff.`,
-    author: `@myblog`,
+    author: `@tgmarinho`,
+    siteUrl: `https://tgmarinho.com`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
