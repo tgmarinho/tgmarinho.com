@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const PostHeader = styled.header`
-  color: #fff;
+  color: var(--postColor);
   margin: auto;
   max-width: 70rem;
   padding: 5rem 5rem 0;
@@ -40,7 +40,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: #fff;
+    color: var(--postColor);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
@@ -85,13 +85,13 @@ export const MainContent = styled.section`
     width: 100%;
   }
   blockquote {
-    color: #fff;
-    border-left: 0.3rem solid #1fa1f2;
+    color: var(--postColor);
+    border-left: 0.3rem solid var(--highlight);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
   }
   hr {
-    border: 1px solid #38444d;
+    border: 1px solid var(--borders);
     margin: 3rem auto;
   }
   #twitter-widget-0,
@@ -148,12 +148,12 @@ export const MainContent = styled.section`
     margin: 1rem auto !important;
   }
   a {
-    border-bottom: 1px dashed #1fa1f2;
-    color: #1fa1f2;
+    border-bottom: 1px dashed var(--highlight);
+    color: var(--highlight);
     text-decoration: none;
     transition: opacity 0.5s;
     svg {
-      color: #fff;
+      color: var(--postColor);
     }
     &:hover {
       opacity: 0.8;

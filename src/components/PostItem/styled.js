@@ -2,17 +2,17 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const PostItemLink = styled(Link)`
-  color: #8899a6;
+  color: var(--texts);
   display: flex;
   text-decoration: none;
   &:hover {
-    color: #1fa1f2;
+    color: var(--highlight);
   }
 `
 
 export const PostItemWrapper = styled.section`
   align-items: center;
-  border-bottom: 1px solid #38444d;
+  border-bottom: 1px solid var(--borders);
   display: flex;
   padding: 2rem 3rem;
   width: 100%;
@@ -20,9 +20,9 @@ export const PostItemWrapper = styled.section`
 
 export const PostItemTag = styled.div`
   align-items: center;
-  background: ${props => (props.background ? props.background : "#1fa1f2")};
+  background: ${props => (props.background ? props.background : "var(--highlight)")};
   border-radius: 50%;
-  color: #fff;
+  color: var(--postColor);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
