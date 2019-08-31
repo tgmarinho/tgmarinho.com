@@ -18,6 +18,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{
             __html: `
             (function() {
+              // Light/Dark Mode
               window.__onThemeChange = function() {};
 
               function setTheme(newTheme) {
@@ -40,6 +41,32 @@ export default function HTML(props) {
               }
 
               setTheme(preferredTheme || 'dark');
+
+              // Vizualization Mode
+              window.__onDisplayChange = function() {};
+
+              function setDisplay(newDisplay) {
+                window.__display = newDisplay;
+                preferredDisplay = newDisplay;
+                document.body.id = newDisplay;
+                window.__onDisplayChange(newDisplay);
+              }
+
+              var preferredDisplay;
+              try {
+                preferredDisplay = localStorage.getItem('display');
+              } catch (err) { }
+
+              window.__setPreferredDisplay = function(newDisplay) {
+                setDisplay(newDisplay);
+                try {
+                  localStorage.setItem('display', newDisplay);
+                } catch (err) {}
+              }
+
+              setDisplay(preferredDisplay || 'list');
+
+
             })();
           `,
           }}
