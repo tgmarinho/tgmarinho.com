@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
+
 import { Home } from "styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { LightbulbOutline as Light } from "styled-icons/material/LightbulbOutline"
-import { ThList as List } from "styled-icons/typicons/ThList"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
+import { ThList as List } from "styled-icons/typicons/ThList"
 
 import * as S from "./styled"
 
@@ -18,6 +19,7 @@ const MenuBar = () => {
   useEffect(() => {
     setTheme(window.__theme)
     setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
     window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
@@ -30,7 +32,7 @@ const MenuBar = () => {
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink to="/search" title="Pesquisar">
+        <S.MenuBarLink to="/search/" title="Pesquisar">
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>
@@ -47,10 +49,11 @@ const MenuBar = () => {
           <Light />
         </S.MenuBarItem>
         <S.MenuBarItem
-          title="Mudar a visualização"
+          title="Mudar visualização"
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
+          className="display"
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
