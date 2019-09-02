@@ -5,8 +5,8 @@ description: >-
   programação funcional, conceito é que a função tem que devolver o mesmo
   resultado quando chamada mais de uma vez com os mesmos parâmetros. 
 date: '2018-02-04 01:54:00'
-thumbnail: /assets/img/desert.jpg
-category: js
+image: /assets/img/desert.jpg
+category: misc
 background: '#D6BA32'
 ---
 Em javascript existe o conceito de funções puras, que vem do paradigma da programação funcional, conceito é que a função tem que devolver o mesmo resultado quando chamada mais de uma vez com os mesmos parâmetros. Ela não depende de nada além dos parâmetros recebidos e não faz uma modificação externa.
