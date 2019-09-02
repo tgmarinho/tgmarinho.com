@@ -28,7 +28,7 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["jekyll", "css", "js", "html", "svg", "dev", "misc"],
+          options: ["mobile", "linux", "js", "dev", "git", "web", "misc"],
         }
       - {
           label: "Background",
@@ -36,12 +36,12 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Jekyll", value: "#B31917" },
-              { label: "CSS", value: "#2DA0C3" },
+              { label: "Mobile", value: "#03A9F4" },
+              { label: "Linux", value: "#2DA0C3" },
               { label: "JS", value: "#D6BA32" },
-              { label: "HTML", value: "#EB7728" },
-              { label: "SVG", value: "#7D669E" },
-              { label: "Dev", value: "#637a91" },
+              { label: "dev", value: "#EB7728" },
+              { label: "git", value: "#7D669E" },
+              { label: "web", value: "#0277BD" },
               { label: "Misc", value: "#7AAB13" },
             ],
         }
