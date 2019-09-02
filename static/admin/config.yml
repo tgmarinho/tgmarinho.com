@@ -2,7 +2,7 @@ backend:
   name: github
   repo: tgmarinho/gatsby-blog
   branch: master
-  site_domain: tgmarinho.netlify.com
+  site_domain: https://tgmarinho.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
