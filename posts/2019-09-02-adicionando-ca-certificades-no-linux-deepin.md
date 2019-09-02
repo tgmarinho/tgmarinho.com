@@ -1,11 +1,12 @@
 ---
 title: Adicionando CA-Certificades no Linux Deepin
 description: Adicionando CA-Certificades no Linux Deepin
-date: '2018-02-09 12:03:00'
-thumbnail: /assets/img/deepin_15.4_with_wikimedia_wallpaper.png
+date: "2018-02-09 12:03:00"
+thumbnail: /assets/img/linux_deepin.png
 category: misc
-background: '#7AAB13'
+background: "#7AAB13"
 ---
+
 Basta fazer o download do certificado, e com o usuário root, colocar na pasta:
 
 ```
