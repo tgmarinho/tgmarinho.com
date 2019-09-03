@@ -8,7 +8,7 @@ import * as S from "./styled"
 const SideBar = () => (
   <S.SidebarWrapper>
     <Profile />
-    <SocialLinks />
+    <SocialLinks hideStyle />
     <MenuLinks />
   </S.SidebarWrapper>
 )

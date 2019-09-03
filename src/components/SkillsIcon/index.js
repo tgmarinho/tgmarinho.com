@@ -1,22 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
+
 import Icons from "./Icons"
 import links from "./content"
 
 import * as S from "./styled"
 
-const SocialLinks = ({ hideStyle }) => (
-  <S.SocialLinksWrapper hideStyle={hideStyle}>
+const SkillsIcon = () => (
+  <S.SocialLinksWrapper>
     <S.SocialLinksList>
       {links.map((link, i) => {
-        const Icon = Icons[link.label]
+        const Icon = Icons[link.label + "Icon"]
 
         return (
           <S.SocialLinksItem key={i}>
             <S.SocialLinksLink
-              href={link.url}
+              href="#"
               title={link.label}
-              target="_blank"
               rel="noopener noreferrer"
             >
               <S.IconWrapper>
@@ -30,12 +29,4 @@ const SocialLinks = ({ hideStyle }) => (
   </S.SocialLinksWrapper>
 )
 
-SocialLinks.propTypes = {
-  hideStyle: PropTypes.bool,
-}
-
-SocialLinks.defaultProps = {
-  hideStyle: false,
-}
-
-export default SocialLinks
+export default SkillsIcon

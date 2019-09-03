@@ -16,8 +16,8 @@ const links = [
     url: "https://instagram.com/tgmarinho",
   },
   {
-    label: "Unsplash",
-    url: "https://unsplash.com/tgmarinho",
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/tgmarinho/",
   },
 ]
 

@@ -39,9 +39,9 @@ collections:
               { label: "Mobile", value: "#03A9F4" },
               { label: "Linux", value: "#2DA0C3" },
               { label: "JS", value: "#D6BA32" },
-              { label: "dev", value: "#EB7728" },
-              { label: "git", value: "#7D669E" },
-              { label: "web", value: "#0277BD" },
+              { label: "Dev", value: "#EB7728" },
+              { label: "Git", value: "#7D669E" },
+              { label: "Web", value: "#0277BD" },
               { label: "Misc", value: "#7AAB13" },
             ],
         }
