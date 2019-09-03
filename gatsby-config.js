@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Thiago Marinho`,
     position: `Software Developer`,
-    description: `A blog about backend development and other cool stuff.`,
+    description: `Um blog sobre desenvolvimento e outras coisas que curto.`,
     author: `@tgmarinho`,
     siteUrl: `https://tgmarinho.com`,
   },
