@@ -17,33 +17,34 @@ const AboutPage = () => (
       <h1>Sobre mim</h1>
       <p>
         Meu nome é Thiago Marinho de Oliveira, sou apaixonado por
-        desenvolvimento de software
+        desenvolvimento de software.
       </p>
 
       <p>
-        Sou formando em Ciência da Computação pela Uniderp/CampoGrande,
+        Sou formado em Ciência da Computação pela Uniderp/Campo Grande-MS,
         atualmente Anhanguera (2013).
       </p>
 
       <p>
-        Sou especialista de Engenharia de Software pala Estácio de Sá (2015).
+        Sou especialista em Engenharia de Software pala Estácio de Sá (2015).
       </p>
 
       <p>Sou muito bem casado e feliz com minha esposa, amo minha família.</p>
 
       <p>
-        No meu tempo livre, faço academia, gosto de caminhar, compartilhar
-        conhecimento através de blog ou vídeo e até mesmo presencial.
+        No meu tempo livre, faço academia, gosto de caminhar, assitir um
+        Netflix, compartilhar conhecimento através de blog ou vídeo e até mesmo
+        presencial.
       </p>
 
       <h2>Habilidades</h2>
 
       <p>
-        Em tantos anos de carreira com Full Stack Informática, desde os 10 anos
-        de idade aprendendo e tals, tive contato com muita tecnologia e áreas
-        (design com Corel, Photoshop, Fireworks, manutenção de computadores,
-        redes, etc), mas na área de desenvolvimento de software foi a que mas
-        gostei e atuo, já trabalhei com:
+        Em tantos anos de carreira como <i>Full Stack Informática</i>, desde os
+        10 anos de idade aprendendo e tals, tive contato com muita tecnologia e
+        diversas áreas da TI (design com Corel, Photoshop, Fireworks, manutenção
+        de computadores, redes, etc), mas foi da área de desenvolvimento de
+        software que mas gostei, já trabalhei com:
       </p>
 
       <SkillsIcon />
