@@ -7,7 +7,7 @@ import GlobalStyles from "../styles/global"
 
 const Container = styled.section`
   align-items: center;
-  background-image: url("https://tgmarinho.com/assets/img/star-404.gif");
+  /* background-image: url("https://tgmarinho.com/assets/img/star-404.gif"); */
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 800px;
