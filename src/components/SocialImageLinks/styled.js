@@ -1,20 +1,40 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
-export const ImageArea = styled.div`
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-`
+export const Container = styled.div`
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    margin: 70px;
+    left: 13%;
 
-export const ImageWrapper = styled.div`
-  width: 300px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
+    ${media.lessThan("medium")`
+      display: none;
+  `}
+  }
 
-  &:before {
+  .image-area {
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .img-wrapper {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-wrapper:before {
     content: "";
+    transform: scaleX(-1);
     position: absolute;
     top: 0;
     left: 180%;
@@ -26,89 +46,100 @@ export const ImageWrapper = styled.div`
     transition: 0.5s;
   }
 
-  &:hover:before {
+  .img-wrapper:hover:before {
     left: -180%;
   }
-`
-export const Photo = styled.img`
-  height: 400px;
-  width: 300px;
-  filter: grayscale(100%);
-  transition: 2s;
 
-  &:hover {
+  .img-wrapper img {
+    height: 400px;
+    width: 300px;
+    filter: grayscale(100%);
+    transition: 2s;
+  }
+  .img-wrapper:hover img {
     filter: grayscale(0%);
     transform: scale(1.1);
   }
-`
-export const Name = styled.h2`
-  background: tomato;
-  /* font-family: Poppins; */
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  transform: perspective(400px) rotateY(90deg);
-  transform-origin: right;
-  transition: 1s;
 
-  ${ImageWrapper}:hover & {
+  .img-wrapper h2 {
+    background: tomato;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: right;
+    transition: 1s;
+  }
+
+  .img-wrapper:hover h2 {
     transform: perspective(400px) rotateY(0deg);
   }
-`
-export const ListWrapper = styled.ul`
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background: rgba(255, 255, 255, 0);
-`
-export const ListItem = styled.li`
-  background: #333;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  transform: perspective(800px) rotateY(90deg);
-  transition: 0.5s;
-  transform-origin: left;
 
-  ${ImageWrapper}:hover & {
+  .img-wrapper ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    /* margin: 0; */
+    padding: 0;
+    list-style: none;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .img-wrapper ul li {
+    background: #333;
+    height: 45px;
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    transform: perspective(800px) rotateY(90deg);
+    transition: 0.5s;
+    transform-origin: left;
+  }
+
+  .img-wrapper:hover ul li {
     transform: perspective(800px) rotateY(0deg);
   }
 
-  ${ImageWrapper}:hover:nth-child(1) & {
+  .img-wrapper:hover ul li:nth-child(1) {
     transition-delay: 0.2s;
   }
 
-  ${ImageWrapper}:hover:nth-child(2) & {
+  .img-wrapper:hover ul li:nth-child(2) {
     transition-delay: 0.6s;
   }
 
-  ${ImageWrapper}:hover:nth-child(3) & {
+  .img-wrapper:hover ul li:nth-child(3) {
     transition-delay: 0.8s;
   }
 
-  ${ImageWrapper}:hover:nth-child(4) & {
-    transition-delay: 0.1s;
+  .img-wrapper:hover ul li:nth-child(4) {
+    transition-delay: 1s;
   }
-`
-export const ListItemLink = styled.a`
-  color: tomato;
-  background: rgba(255, 255, 255, 0);
-`
 
-export const IconWrapper = styled.i`
-  color: tomato;
-  background: rgba(255, 255, 255, 0);
+  .img-wrapper:hover ul li:nth-child(5) {
+    transition-delay: 1.2s;
+  }
 
-  ${ImageWrapper}:hover & {
+  .img-wrapper ul li a {
+    border-bottom: none;
+    color: tomato;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .img-wrapper ul li i svg {
+    color: tomato;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .img-wrapper ul li i svg :hover {
     color: #fff;
     background: rgba(255, 255, 255, 0);
   }
