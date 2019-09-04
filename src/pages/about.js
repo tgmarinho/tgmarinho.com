@@ -6,6 +6,8 @@ import SocialLinks from "../components/SocialLinks"
 
 import { MainContent } from "../styles/base"
 import SkillsIcon from "../components/SkillsIcon"
+import SocialImageLinks from "../components/SocialImageLinks"
+import Teste2 from "../components/SocialImageLinks/Teste2"
 
 const AboutPage = () => (
   <Layout>
@@ -21,6 +23,11 @@ const AboutPage = () => (
           desenvolvimento de software.
         </a>
       </p>
+
+      {/* <div> */}
+      {/* <SocialImageLinks /> */}
+      <Teste2 />
+      {/* </div> */}
 
       <p>
         Sou formado em Ciência da Computação pela Uniderp/Campo Grande-MS,

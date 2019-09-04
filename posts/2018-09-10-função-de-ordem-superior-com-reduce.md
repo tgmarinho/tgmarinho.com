@@ -1,11 +1,12 @@
 ---
-title: 'Função de Ordem Superior com Reduce '
+title: "Função de Ordem Superior com Reduce "
 description: Função de Ordem Superior com Reduce — Compose do Recompose
-date: '2019-09-10 04:03:00'
+date: "2018-09-10 04:03:00"
 thumbnail: /assets/img/high-order-function.png
 category: js
-background: '#D6BA32'
+background: "#D6BA32"
 ---
+
 Introdução
 
 Olá, tudo bem? Quero falar de um assunto bem avançado de Javascript.
@@ -24,9 +25,9 @@ const compose = (...funcs) => funcs.reduce((a, b) => (...args) => a(b(...args)))
 
 para continuar lendo:
 
-* Saber o básico de Javascript (const/let/var).
-* Conhecer ES06, desestruturação de parâmetros, arrays, funções, arrows functions, HOF, e "só".
-* Ser curioso, vontade de aprender, perguntar e dar feedback.
+- Saber o básico de Javascript (const/let/var).
+- Conhecer ES06, desestruturação de parâmetros, arrays, funções, arrows functions, HOF, e "só".
+- Ser curioso, vontade de aprender, perguntar e dar feedback.
 
 **Caso de Uso**
 
