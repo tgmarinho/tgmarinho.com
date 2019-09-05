@@ -1,7 +1,7 @@
 ---
 title: Android e os conceitos básicos de Activity e View
 description: Android e os conceitos básicos de Activity e View
-date: "2011-12-01 12:03:00"
+date: "2012-01-02 12:03:00"
 image: /assets/img/elefante.jpg
 category: misc
 background: "#7AAB13"
