@@ -2,7 +2,7 @@
 title: Meu Ambiente de desenvolvimento
 description: >-
   Apresento meu hardware, IDE, Extensões, Terminal, Plugins, Fontes, Tema e
-  Ferramentas para Desenvolvimento de Sofware
+  Ferramentas para Desenvolvimento de Software
 date: '2019-09-09 02:45:46'
 image: /assets/img/wallpaper_2.jpeg
 category: dev
