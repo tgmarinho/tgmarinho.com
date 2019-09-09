@@ -2,14 +2,11 @@
 title: >-
   Ignorando git status quando muda permissão de pastas e arquivos no projeto
   versionando com git
-description: >-
-  [LINUX] [GIT] se alguém fizer um chmod 777 -Rf * em um projeto num diretório
-  ou mudar para outro tipo de permissão e quiser ignorar isso no git, basta
-  rodar esse comando...
+description: Se alguém fizer um chmod 777 -Rf * em um projeto num diretório ou ...
 date: '2019-09-02 04:16:34'
-thumbnail: /assets/img/github-social-code.jpeg
+image: /assets/img/linux.jpg
 category: dev
-background: '#637a91'
+background: '#EB7728'
 ---
 \[LINUX] \[GIT] se alguém fizer um `chmod 777 -Rf * `em um projeto num diretório ou mudar para outro tipo de permissão e quiser ignorar isso no git, basta rodar esse comando:
 
