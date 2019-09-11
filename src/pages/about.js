@@ -58,7 +58,7 @@ const AboutPage = () => (
 
       <p>
         Hoje estou focado no desenvolvimento Web/Mobile Full Stack com
-        Javascript Node, React, React Native e todo ecossitema por volta dessas
+        Javascript Node, React, React Native e todo ecossistema por volta dessas
         tecnologias.
       </p>
 
