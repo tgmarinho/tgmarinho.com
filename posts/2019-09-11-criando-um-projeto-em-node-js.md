@@ -8,16 +8,14 @@ image: /assets/img/nodejs.png
 category: dev
 background: '#EB7728'
 ---
-# Criando um projeto em NODE JS
-
 ## Criação do Servidor
 
-Se tiver com [Yarn](https://www.tgmarinho.com/conceitos-do-node/) instalado na máquina.
-Só rodar o comando no terminal, em uma pasta da sua workstation (onde você deixa seus portfólios:
+Se estiver com [Yarn](https://www.tgmarinho.com/conceitos-do-node/) instalado na máquina.
+Só rodar o comando no terminal, em uma pasta da sua workstation _(onde você deixa seus portfólios)_:
 
 `❯ yarn init -y`
 
-Depois disso o arquivo package.json será criado, nele contém as referências das dependências do projeto e scripts de inicialização, que são executados com **npm** ou **yarn**.
+Depois disso o arquivo package.json será criado, nele contém as referências das dependências do projeto e scripts de inicialização que são executados com **npm** ou **yarn**.
 
 Exemplo: `package.json`
 
@@ -91,9 +89,9 @@ server.get("/test", (req, res) => {
 
 Existem três tipos de parâmetros, dois deles no método GET e um no método POST.
 
-**_Query params_** recebe os dados da requisição como parâmetro na URL, pode conter 1 ou mais parâmetros.
+_**Query params**_ recebe os dados da requisição como parâmetro na URL, pode conter 1 ou mais parâmetros.
 
-**_Route params_** recebe os dados da requisição na rota, é melhor forma para buscar algo por ID por exemplo.
+_**Route params**_ recebe os dados da requisição na rota, é melhor forma para buscar algo por ID por exemplo.
 
 Ambos mudam a forma de escrever, veja o código: 
 
@@ -201,7 +199,7 @@ E o Yarn irá rodar o comando que está dentro do `dev`.
 
 ## CRUD
 
-**_CRUD_** (_Create Retrieve, Update, Delete_) é uma operação para Criar, Ler (um ou mais usuários), Atualizar e Deletar usuários.
+_**CRUD**_ (_Create Retrieve, Update, Delete_) é uma operação para Criar, Ler (um ou mais usuários), Atualizar e Deletar usuários.
 
 ### Criar
 
@@ -291,8 +289,6 @@ Mas geralmente não precisa retornar uma lista, você remove o usuário e envia 
 return res.json({ message:  "Deletado com sucesso" });
 ```
 
-
-
 ## Middleware
 
 [Middleware](https://expressjs.com/pt-br/guide/using-middleware.html) é a base da aplicação Express. Pode ser chamado de interceptador.
@@ -350,8 +346,6 @@ Método: PUT na URL: /users/2
 
 Observe que à cada rota que chamei através do Insomnia ou acessando a url no navegador, ele entrou no Middleware e disparou a mensagem no console, informando o método e url utilizada na requisição.
 
-
-
 #### Middleware Local
 
 São utilizados apenas na rota, anteriormente definimos um middleware global, a cada requisição em qualquer rota, o middleware era executado, agora queremos que em uma determinada rota, execute um middleware local.
@@ -388,8 +382,6 @@ server.put("/users/:index", checkUserExists, (req, res) => {
 ```
 
 ![](/assets/img/screen-shot-2019-09-11-at-11.09.31.png)
-
-
 
 Falei que a função na rota, pode receber vários middlewares, então vamos fazer mais um, dessa vez ele irá checar se usuário informado na rota existe no array, caso contrário informa uma mensagem de erro, isso é bom porque evita que a requisição continue se não tiver usuário presente, evita até mesmo algum erro na aplicação:
 
