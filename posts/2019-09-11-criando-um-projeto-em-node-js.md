@@ -1,5 +1,5 @@
 ---
-title: Criando um projeto em NODE JS
+title: Criando um projeto em NODE
 description: >-
   Nesse post apresento alguns conceitos do Node, criação de servidor com
   express, conceito de middlewares, e mostro algumas ferramentas.
