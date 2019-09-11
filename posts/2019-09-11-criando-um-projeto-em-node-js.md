@@ -453,4 +453,8 @@ Como o middleware é executado antes, nessa função acima, posso acessar a vari
 
 Espero fazer um vídeo mostrando, mas tem o [link oficial aqui](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_access-loaded-scripts).
 
+
+
+Chegamos ao final de mais um artigo, espero que tenha curtido, eu aprendi muito, qualquer dúvida deixe nos comentários.
+
 ### _****_[_**Clique aqui para acessar o código completo.**_](https://github.com/tgmarinho/node_basico)_****_
