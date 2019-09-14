@@ -76,12 +76,13 @@ Docker ajuda a controlar os serviços externos da aplicação: Banco de Dados, R
 
 #### Principais conceitos
 
-	- Imagem: São os principais serviços que iremos utilizar, ex: postres, mongodb, redis, etc.
-	- Container: é uma instância de uma imagem, se tivermos uma imagem do mongodb, podemos criar um ou mais containers do mongodb, até mesmo para servir para outras aplicações na máquina
-	- Docker Registry (Docker Hub) é onde podemos visualizar e baixar as imagens (ISOs). é basicamente o repositório de imagens, inclusive podemos criar as nossas próprias imagens e hospedar lá.
-	- Dockerfile
-		- Receita de uma imagem: Define como a imagem da nossa aplicação irá funcionar em um outro computador, em um ambiente do zero.
-		- Dockerfile de exemplo para executar a nossa aplicação:
+- Imagem: São os principais serviços que iremos utilizar, ex: postres, mongodb, redis, etc.
+- Container: é uma instância de uma imagem, se tivermos uma imagem do mongodb, podemos criar um ou mais containers do mongodb, até mesmo para servir para outras aplicações na máquina
+- Docker Registry (Docker Hub) é onde podemos visualizar e baixar as imagens (ISOs). é basicamente o repositório de imagens, inclusive podemos criar as nossas próprias imagens e hospedar lá.
+- Dockerfile
+  - Receita de uma imagem: Define como a imagem da nossa aplicação irá funcionar em um outro computador, em um ambiente do zero.
+  - Dockerfile de exemplo para executar a nossa aplicação:
+
 ```
 # Partimos de uma imagem existente
 FROM node:10
@@ -94,6 +95,7 @@ RUN yarn
 EXPOSE 3333
 # Executamos nossa aplicação
 CMD yarn start
+
 ```
 
 Fim: [https://github.com/tgmarinho/gobarber/tree/aula3](https://github.com/tgmarinho/gobarber/tree/aula3)
@@ -114,6 +116,7 @@ Instalando o postgres:
 ```
 ❯ docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
+
 Redirecionamento de Portas, toda vez que algum serviço for chamado na porta 5432 do servidor, será redirecionado para 5432 do container no docker:
 `-p 5432:5432`
 
@@ -123,14 +126,22 @@ Quando já se tem uma imagem no Docker:
 
 pasta executar uma imagem:
 
-```❯ docker run -d 30bf4f039abe```
+```
+❯ docker run -d 30bf4f039abe
+```
 
 Para executar um container:
 
-```docker  start a46a366365bb```
+```
+docker  start a46a366365bb
+```
 
 Esses caracteres estranhos é o ID da imagem, para ver basta digitar: 
-```❯ docker image ls ```
+
+```
+❯ docker image ls
+```
+
 ```
 ❯ docker image ls
 REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
@@ -167,23 +178,29 @@ e criar o banco de dados: `create database gobarber``
 
 Quando reinicia a máquina, o docker para, para subir novamente só seguir os comandos:
 
-```docker ps -a```  para mostrar todos os container mesmo os que não estão em execução.
+`docker ps -a` para mostrar todos os container mesmo os que não estão em execução.
 
 e depois executar o comando para subir o container:
 
-```docker  start postgres ```
+```
+docker  start postgres 
+```
 
 Pode ser o ID ou o nome do container.
 
 Para ver os logs do container:
 
-```docker logs postgres````
+```
+docker logs postgres
+```
 
 O mesmo container pode ser usado para outras aplicações, mas tem como fazer um container apenas para a aplicação.
 
 Para remover um container: 
 
-```docker rm "ID ou nome do container" ```
+```
+docker rm "ID ou nome do container"
+```
 
 Fim: [https://github.com/tgmarinho/gobarber/tree/aula4](https://github.com/tgmarinho/gobarber/tree/aula4)
 
@@ -206,17 +223,21 @@ e no no JS teremos Users.js, Products.js, ProductsItem.js.
 Diferença entre SQL e SequelizeSQL:
 
 SQL:
+
 ```
 INSERT INTO users (name, email) VALUES ("Thiago Marinho", "tgmarinho@gmail.com")
 ```
+
 ```
 SELECT * FROM users WHERE email = "tgmarinho@gmail.com" LIMIT 1
 ```
 
 Sequelize:
+
 ```
 User.create({ name: 'Diego Fernandes' , email: 'diego@rocketseat.com.br' , })
 ```
+
 ```
 User.findOne({ where: { email: 'tgmarinho@gmail.com' } })
 ```
@@ -259,6 +280,7 @@ module.exports = {
     }
 }
 ```
+
 [https://sequelize.org/master/manual/migrations.html](https://sequelize.org/master/manual/migrations.html)
 
 Obs:
@@ -289,11 +311,14 @@ M = Model = Código da estrutura do banco de dados utilizando ORM ou não;
 V = View = Código HTML, CSS, JS, JSX, código de criação e manipulação das telas do site/app;
 C = Controller = Código JS, que contém a lógica do negócio, é o intermediário entre o Model e a View
 
-```M <-> C <-> V```
+```
+M <-> C <-> V
+```
 
 A View faz a requisição, o Controller recebe, processa, chama o banco de dados(Model) o banco retorna para o Controller e repassa para a View a resposta, a qual é renderizada para o usuário.
 
 Exemplo de um Controller:
+
 ```
 class UserController {
  index() { } !/ Listagem de usuários
@@ -303,6 +328,7 @@ class UserController {
  delete() { } !/ Remover usuário
 }
 ```
+
 Uma boa prática de criação de Controller, na estrutura REST e MVC em geral, é que o controller só pode ter os cinco métodos abaixo, ou menos, mais que isso não. Se sentir a necessidade de ter outro método, é porque na verdade você tem que criar um outro objeto, exemplo: SessionController.js, LoginController.js.
 
 
@@ -322,7 +348,9 @@ Adicionando o eslint como dependências de desenvolvimento:
 
 Feito isso só inicializar o eslint:
 
-``` yarn eslint --init```
+```
+yarn eslint --init
+```
 Ele vai fazer algumas perguntas e você pode configurar a seu gosto, eu usei a terceira opção:
 
 ```
@@ -335,6 +363,7 @@ $ /Users/tgmarinho/Developer/bootcamp_rocketseat_studies/gobarber/node_modules/.
   To check syntax and find problems 
 ❯ To check syntax, find problems, and enforce code style 
 ```
+
 E só seguir respondendo o Eslint. No final ele pede para instalar as dependências, só instalar e remover o package-lock.json e executar um yarn para atualizar as dependências, isso eu faço pq não estou usando o npm e sim o yarn como gerenciador de dependência e o eslint em baixo dos panos usa o npm para instalar.
 
 No final ele cria um arquivo: `.eslintrc.js` com as seguintes configurações padrão:
@@ -384,6 +413,7 @@ Pronto, agora já deve estar ok. Se o VSCode não estiver acusando erro de Eslin
 
 No .eslintrc.js, teremos uma definição de novas regras, é tipo como subscrever as regras padrão da guia de estilo airbnb no eslint, isso é necessário algumas vezes devido algum framework que iremos utilizar no dia a dia.
 `.eslintrc.js`:
+
 ```
  rules: {
     "class-methods-use-this": "off",
@@ -420,12 +450,14 @@ plugins: ["prettier"],
 Com isso o prettier está pronto para ser usado, porém, tem algumas regras de conflito entre o prettier e airbnb, então precisa de mais configuração, para desabilitar as configurações que o prettier sobrescreve do airbnb.
 
 Criar o arquivo: `prettier.rc`:
+
 ```
 {
 	"singleQuote":  true,
 	"trailingComma":  "es5"
 }
 ```
+
 Defini a regra para manter aspas simples e deixar `;` no final de cada instrução de código. Done!
 
 Para corrigir todos os arquivos é só rodar:
@@ -477,6 +509,7 @@ Fim: [https://github.com/tgmarinho/gobarber/tree/aula6](https://github.com/tgmar
 - adicionar a dependência: `yarn add sequelize` no projeto
 - adicionar a interface de linha de comando do sequelize: `yarn add sequelize-cli -D`
 - criar o arquivo `.sequelizerc` na raiz do projeto para poder configurar os caminhos para as pastas de models, config, para rodar os comandos sequelize-cli: 
+
 ```
 const { resolve } = require('path');
 
@@ -491,6 +524,7 @@ module.exports = {
 Configurando o database:
 - adiciono as dependencias: ```yarn add pg pg-hstore```
 - no arquivo config/database.js: 
+
 ```
 module.exports = {
   dialect: 'postgres',
@@ -518,10 +552,13 @@ yarn sequelize migration:create --name=create-users
 ```
 
 Com isso ele vai criar um arquivo:
+
 ```
 20190913144153-create-users.js
 ```
+
 Com um template:
+
 ```
 'use strict';
 
@@ -619,7 +656,6 @@ Loaded configuration file "src/config/database.js".
 E ai podemos ver o DDL lá na GUI do Postgres:
 
 ```
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name character varying(255) NOT NULL,
@@ -634,7 +670,6 @@ CREATE TABLE users (
 
 CREATE UNIQUE INDEX users_pkey ON users(id int4_ops);
 CREATE UNIQUE INDEX users_email_key ON users(email text_ops);
-
 ```
 
 Além da tabela users, é criada uma tabela SequelizeMeta que tem os registros de cada migration que foram executadas.
@@ -680,7 +715,6 @@ class User extends Model {
 }
 
 export default User;
-
 ```
 
 Criei a classe User que extend de Model do sequelize para receber todos métodos que tem na Model, agora a nossa classe de domínio User é uma Model, devido a herança.
@@ -747,6 +781,7 @@ Fim: [https://github.com/tgmarinho/gobarber/tree/aula11](https://github.com/tgma
 Quando o usuário digita a senha e envia para o controllers, queremos que seja gerado um hash para salvar a senha no banco de dados, e posteriormente quando ele for fazer login, ele digita a senha normal, e geramos um hash e comparamos com o hash que foi salvo no password_hash do banco de dados, se for igual, ok, está autenticado.
 
 Para fazer isso precisamos de uma lib para gerar o hash do password:
+
 ```
 yarn add bcryptjs 
 ```
@@ -789,6 +824,7 @@ Então quando for chamar a rota de update usando o método `put` na rota `/users
 
 Código do Middleware:
 `app/middleware/auth.js`:
+
 ```
 export default (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -797,12 +833,15 @@ export default (req, res, next) => {
   next();
 };
 ```
+
 `routes.js`:
+
 ```
 routes.put('/users', authMiddleware, UserController.update);
 ```
 
 Ou podemos utilizar de forma global, e toda a rota abaixo de use(authMiddleware) devem ser autenticadas:
+
 ```
 import { Router } from 'express';
 import UserController from './app/controllers/UserController';
@@ -869,6 +908,7 @@ E precisamos apenas do valor do token, para isso desestruturamos o array, que fo
 ```
 const [, token] = authHeader.split(' ');
 ```
+
 ```
 ['Bearer','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTY4NDA1MDAyLCJleHAiOjE1NjkwMDk4MDJ9.NPwa4vr80wAeEJvX9XWNMQAsUWXaDoSUwuw1KAR4wVw']
 ```
@@ -884,6 +924,7 @@ req.userId = decoded.id;
 E agora com isso no método update do UserController.js teremos acesso, e em todos os controllers que passarem pela verificação de autenticação:
 
 `UserController.js`:
+
 ```
  async update(req, res) {
     console.log(req.userId);
