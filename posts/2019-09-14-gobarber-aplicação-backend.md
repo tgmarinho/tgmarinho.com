@@ -10,16 +10,39 @@ background: '#EB7728'
 ---
 # GoBarber
 
+Nesse projeto vamos construir um API no backend utilizando NodeJS, Express, Postgres, Nodemon, Sucrase, entre outras libs. Essas são a minhas notas de aula do bootcamp da [Rocketseat](https://rocketseat.com.br).
+
+Tópicos:
+
+* Aula 1 - Configurando o Projeto
+* Aula 2 - Nodemon & Sucrase
+* Aula 3 - Conceitos de Docker
+* Aula 4 - Mão na Massa
+* Aula 5 - Sequelize & MVC
+* Aula 6 - Padrão de código - Eslint, Prettier & EditorConfig
+* Aula 7 - Configurando o Sequelize
+* Aula 8 - Migração de usuário
+* Aula 9 - Criação do Model de Usuário
+* Aula 10 - Loader de Models
+* Aula 11 - Criando usuário
+* Aula 12 - Enviando password_hash
+* Aula 13 - Conceitos de JWT
+* Aula 14 - Autenticação JWT
+* Aula 15 - Middleware de autenticação
+* Aula 16 - Update do usuário
+* Aula 17 - Validando dados de entrada
+
+Código do projeto no [Github](https://github.com/tgmarinho/gobarber).
 
 ## Aula 1 - Configurando o Projeto
-Uma maneira legal de estruturar o backend é utilizar Classes
+Uma maneira legal de estruturar o backend é utilizar Classes.
 
-Nesse commit foi criado um projeto com node, usando `yarn init -y e instalado a dependência do express.
+Nesse commit foi criado um projeto com node, usando `yarn init -y e instalado a dependência do `express.
 
-Foi estruturado a pasta e separado a lógica da aplicação.
+Foi estruturado as pastas, separando a lógica da aplicação.
 As rotas são middlewares também, porém, elas ficam separadas dos middlewares para dar mais semântica.
 
-E o servidor foi inicializado de dentro do server.js onde a instância do app foi importada, isso desacopla para facilitar no teste.
+O servidor foi inicializado de dentro do server.js onde a instância do app foi importada, isso desacopla para facilitar no teste.
 
 Veja o código: [https://github.com/tgmarinho/gobarber/tree/aula1](https://github.com/tgmarinho/gobarber/tree/aula1)
 
@@ -101,7 +124,7 @@ CMD yarn start
 Fim: [https://github.com/tgmarinho/gobarber/tree/aula3](https://github.com/tgmarinho/gobarber/tree/aula3)
 
 
-### Aula 4 - Mão na Massa
+## Aula 4 - Mão na Massa
 
 Baixar o docker (Mac, Linux, Windows): [https://docs.docker.com/install/](https://docs.docker.com/install/)
 
@@ -332,7 +355,7 @@ class UserController {
 Uma boa prática de criação de Controller, na estrutura REST e MVC em geral, é que o controller só pode ter os cinco métodos abaixo, ou menos, mais que isso não. Se sentir a necessidade de ter outro método, é porque na verdade você tem que criar um outro objeto, exemplo: SessionController.js, LoginController.js.
 
 
-## Padrão de código - Eslint, Prettier & EditorConfig
+## Aula 6 - Padrão de código - Eslint, Prettier & EditorConfig
 
 Padrão de código é muito útil quando se está trabalhando com um time, pq cada um pode fazer as coisas de sua maneira e a base de código não vai ficar muito boa, tem desenvolvedor que vai usar var, outro const, e outro let, vai pular linha no final, outro não vai, vai usars export default, e outro não, e isso gera uma bagunça, e aí com isso temos algumas ferramentas que ajudam a definir as regras(padrão) de código e um estilizador de código utilizando as regras, e o mais adotado na comunidade JS, é o Eslint para definir as regras e o Prettier para formatar o código conforme as regras definidas no Eslint.
 
@@ -366,7 +389,7 @@ $ /Users/tgmarinho/Developer/bootcamp_rocketseat_studies/gobarber/node_modules/.
 
 E só seguir respondendo o Eslint. No final ele pede para instalar as dependências, só instalar e remover o package-lock.json e executar um yarn para atualizar as dependências, isso eu faço pq não estou usando o npm e sim o yarn como gerenciador de dependência e o eslint em baixo dos panos usa o npm para instalar.
 
-No final ele cria um arquivo: `.eslintrc.js` com as seguintes configurações padrão:
+No final ele cria um arquivo: ` .eslintrc.js ` com as seguintes configurações padrão:
 ```
 module.exports = {
     env: {
