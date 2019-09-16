@@ -10,16 +10,18 @@ background: '#EB7728'
 ---
 # GoBarber
 
+Nesse projeto vamos construir um API no backend utilizando NodeJS, Express, Postgres, Nodemon, Sucrase, entre outras libs. Essas são a minhas notas de aula do bootcampo da [Rocketseat](https://rocketseat.com.br).
+
 
 ## Aula 1 - Configurando o Projeto
-Uma maneira legal de estruturar o backend é utilizar Classes
+Uma maneira legal de estruturar o backend é utilizar Classes.
 
-Nesse commit foi criado um projeto com node, usando `yarn init -y e instalado a dependência do express.
+Nesse commit foi criado um projeto com node, usando `yarn init -y e instalado a dependência do `express.
 
-Foi estruturado a pasta e separado a lógica da aplicação.
+Foi estruturado as pastas, separando a lógica da aplicação.
 As rotas são middlewares também, porém, elas ficam separadas dos middlewares para dar mais semântica.
 
-E o servidor foi inicializado de dentro do server.js onde a instância do app foi importada, isso desacopla para facilitar no teste.
+O servidor foi inicializado de dentro do server.js onde a instância do app foi importada, isso desacopla para facilitar no teste.
 
 Veja o código: [https://github.com/tgmarinho/gobarber/tree/aula1](https://github.com/tgmarinho/gobarber/tree/aula1)
 
@@ -366,7 +368,7 @@ $ /Users/tgmarinho/Developer/bootcamp_rocketseat_studies/gobarber/node_modules/.
 
 E só seguir respondendo o Eslint. No final ele pede para instalar as dependências, só instalar e remover o package-lock.json e executar um yarn para atualizar as dependências, isso eu faço pq não estou usando o npm e sim o yarn como gerenciador de dependência e o eslint em baixo dos panos usa o npm para instalar.
 
-No final ele cria um arquivo: `.eslintrc.js` com as seguintes configurações padrão:
+No final ele cria um arquivo: ` .eslintrc.js ` com as seguintes configurações padrão:
 ```
 module.exports = {
     env: {
