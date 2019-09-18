@@ -22,13 +22,6 @@ const pluginConfig = [
     },
   },
   {
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-      trackingId: "UA-XXXXXXXXX-X",
-    },
-  },
-  {
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [
