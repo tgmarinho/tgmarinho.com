@@ -4,7 +4,7 @@ description: >-
   Minhas notas de aula e código do bootcamp da Rocketseat, nesse projeto criamos
   uma API com NodeJS
 date: '2019-09-14 10:35:12'
-image: /assets/img/nodeserver-logo.png
+image: /assets/img/js_wallpaper.jpg
 category: dev
 background: '#EB7728'
 ---
