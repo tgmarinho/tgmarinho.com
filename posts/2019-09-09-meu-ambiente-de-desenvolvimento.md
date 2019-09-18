@@ -122,6 +122,7 @@ zplugin light zdharma/fast-syntax-highlighting
 
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 * [Dracula Devtools Theme](https://chrome.google.com/webstore/detail/dracula-devtools-theme/gdhgkfojgddhijhlnnnbopleoabkeife)
+* [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=pt-BR)
 
 ![](/assets/img/screen-shot-2019-09-09-at-14.22.24.png)
 
