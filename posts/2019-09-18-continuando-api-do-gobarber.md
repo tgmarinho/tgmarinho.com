@@ -14,26 +14,26 @@ Segue as minhas notas de aula do Bootcamp da [Rocketseat](https://rocketseat.com
 
 ### Tópicos:
 
-#### Aula 18 - Configurando Multer
-#### Aula 19 - Avatar do Usuário
-#### Aula 20 - Listagem de prestadores de serviços
-#### Aula 21 - Migration e model de agendamento
-#### Aula 22 - Agendamento de serviço
-#### Aula 23 - Validações de agendamento
-#### Aula 24 - Listando agendamentos do usuário
-#### Aula 25 - Aplicando paginação
-#### Aula 26 - Listando agenda do prestador  
-#### Aula 27 - Configurando MongoDB
-#### Aula 28 - Notificando novos agendamentos
-#### Aula 29 - Listando notificações do usuário
-#### Aula 30 - Marcar notificações como lidas
-#### Aula 31 - Cancelamento de agendamento
-#### Aula 32 - Configurando Nodemailer
-#### Aula 33 - Configurando templates de email
-#### Aula 34 - Configurando fila com Redis
-#### Aula 35 - Monitorando falhas na fila
-#### Aula 36 - Listando horários disponíveis
-#### Aula 37 - Campos virtuais no agendamento
+- Aula 18 - Configurando Multer
+- Aula 19 - Avatar do Usuário
+- Aula 20 - Listagem de prestadores de serviços
+- Aula 21 - Migration e model de agendamento
+- Aula 22 - Agendamento de serviço
+- Aula 23 - Validações de agendamento
+- Aula 24 - Listando agendamentos do usuário
+- Aula 25 - Aplicando paginação
+- Aula 26 - Listando agenda do prestador  
+- Aula 27 - Configurando MongoDB
+- Aula 28 - Notificando novos agendamentos
+- Aula 29 - Listando notificações do usuário
+- Aula 30 - Marcar notificações como lidas
+- Aula 31 - Cancelamento de agendamento
+- Aula 32 - Configurando Nodemailer
+- Aula 33 - Configurando templates de email
+- Aula 34 - Configurando fila com Redis
+- Aula 35 - Monitorando falhas na fila
+- Aula 36 - Listando horários disponíveis
+- Aula 37 - Campos virtuais no agendamento
 
 ## Aula 18 - Configurando Multer
 
