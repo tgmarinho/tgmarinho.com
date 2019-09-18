@@ -2,14 +2,7 @@ require("dotenv").config()
 
 const queries = require("./src/utils/algolia_queries")
 
-module.exports = {
-  siteMetadata: {
-    title: `Thiago Marinho`,
-    position: `Software Developer`,
-    description: `Um blog sobre desenvolvimento e outras coisas que curto.`,
-    author: `@tgmarinho`,
-    siteUrl: `https://tgmarinho.com`,
-  },
+const pluginConfig = {
   plugins: [
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
@@ -27,6 +20,13 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-XXXXXXXXX-X",
       },
     },
     {
@@ -82,4 +82,27 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
   ],
+}
+
+if (process.env.CONTEXT === "production") {
+  const analytics = {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      head: false,
+    },
+  }
+
+  pluginConfig.push(analytics)
+}
+
+module.exports = {
+  siteMetadata: {
+    title: `Thiago Marinho`,
+    position: `Software Developer`,
+    description: `Um blog sobre programação e outras coisas que curto.`,
+    author: `@tgmarinho`,
+    siteUrl: `https://tgmarinho.com`,
+  },
+  plugins: pluginConfig,
 }
