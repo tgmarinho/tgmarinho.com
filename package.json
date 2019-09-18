@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "tgmarinho-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Um blog sobre desenvolvimento e outras coisas que curto.",
+  "version": "1.0.0",
+  "author": "Thiago Marinho <tgmarinho@gmail.com>",
   "dependencies": {
     "algoliasearch": "^3.34.0",
     "dotenv": "^8.1.0",
@@ -58,9 +58,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tgmarinho/gatsby-blog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/tgmarinho/gatsby-blog/issues"
   }
 }
