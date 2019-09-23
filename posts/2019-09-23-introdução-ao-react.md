@@ -1,7 +1,7 @@
 ---
 title: Introdução ao React
 description: >-
-  Eu mostro como configurar o webpack, babel e os loader do css e imagem para
+  Eu mostro como configurar o webpack, babel e os loaders do css e imagem para
   aplicação do React
 date: '2019-09-23 07:17:32'
 image: /assets/img/logo-og.png
