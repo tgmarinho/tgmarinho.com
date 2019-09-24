@@ -989,4 +989,4 @@ Isso é muito bom para ver o ciclo de vida do React.
 
 Chegamos ao fim da introdução ao React.
 
-Agora tem o [desafio](https://github.com/tgmarinho/faceseat) de exerício. Bora programar!
+Agora tem o [desafio](https://github.com/tgmarinho/faceseat) para fazer! Bora programar!
