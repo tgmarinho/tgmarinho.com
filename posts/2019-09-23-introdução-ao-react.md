@@ -1,8 +1,8 @@
 ---
 title: Introdução ao React
 description: >-
-  Eu mostro como configurar o webpack, babel e os loaders do css e imagem para
-  aplicação do React
+  Como configurar o webpack, babel e os loaders do css e imagem, principais
+  ciclo de vidas do React
 date: '2019-09-23 07:17:32'
 image: /assets/img/logo-og.png
 category: dev
@@ -77,10 +77,11 @@ Esse código na verdade é um .JSX React com Javascript. Inclusive os elementos 
 	- Programação declarativa: Você informa qual resultado que você espera e ela se comporta de acordo com estado que a gente passa.
 
 #### JSX
-	- Escrever HTML dentro do Javascript;
-	- Com react podemos criar nosso próprios elementos;
+ - Escrever HTML dentro do Javascript;
+ - Com react podemos criar nosso próprios elementos;
 	
-	Antes do JSX:
+ Antes do JSX:
+
 ```
 // ANTES
 function Button() {
@@ -101,6 +102,7 @@ function Button() {
 Muito ruim, verboso...
 
 E agora com JSX
+
 ```
 // Com JSX
 function Button() {
@@ -129,7 +131,7 @@ Tanto o Header e Button são componentes
 Programação imperativa você dá os passos e as condições para algo acontecer.
 Programação declarativa você dá as condições para algo acontecer.
 
-##### IMPERATIVA
+#### IMPERATIVA
 
 ```
 const notificacoes = 0;
@@ -152,7 +154,7 @@ function montaBadge(num) {
 }
 ```
 
-##### DECLARATIVA
+#### DECLARATIVA
 
 ```
 !/ Não comparamos com o estado anterior
@@ -206,8 +208,11 @@ yarn add react react-dom
 Depois criar um arquivo na raiz do projeto: `babel-config.js` para fazer as configurações do babel.
 
 ```
-we
+module.exports = {
+  presets: ["@babel/preset-env", "@babel/preset-react"]
+};
 ```
+
 `@babel/preset-env` = alterar as funcionalidades que o browser não entente para uma versão que ele entenda, por exemplo, import/export, arrow functions, classes, do javascript moderno que o browser ainda não entende. Essa lib altera para versão antiga do JS ES5.
 
 `@babel/preset-react` = altera as funcionalidades do React que o browser não entende, por exemplo os JSX é convertido para arquivo JS.
@@ -381,7 +386,7 @@ Vamos criar um componente Raiz que é o pai de todo os componentes de dentro da 
 
 Podemos utilizar o React pois configuramos no babel config o preset-react que converte o JSX (React) para o JS para o browser entender.
 
-No `public/index.html` trocamos o elemento <h1> pela div que recebe o componente raiz:
+No `public/index.html` trocamos o elemento ```<h1>``` pela div que recebe o componente raiz:
 
 ```
 <div  id="app"></div>
@@ -874,7 +879,9 @@ export default TechItem;
 	```
 	yarn add prop-types
 	```
+
 Agora adicionar no código:
+
 ```
 import React from "react";
 import PropTypes from "prop-types";
@@ -900,7 +907,6 @@ TechItem.propTypes = {
 };
 
 export default TechItem;
-
 ```
 
 Quando um prop é obrigatório passo isRequired, quando não é obrigatório, não informo o isRequired e tenho que declarar no defaultProps, e o browser sempre vai receber um alerta se alguma regra foi descumprida e podemos ajustar no código.
@@ -944,6 +950,7 @@ Vamos ver na prática, precisamos salvar no localStorage o array de tecnologia, 
     }
   }
 ```
+
 Então, eu verifico se o array anterior é diferente do array atual, se for faz alguma coisa, nesse caso estou adicionando uma novo array de tech no localStorage, baseado no array atual.
 Como eu não preciso utilizar o prevProps pois esse componente não recebe props, então eu ignore colocando um `_` no primeiro parâmetro da função.
 
@@ -963,11 +970,10 @@ Agora temos outro cenário, precisamos fazer com que o array de techs venha pree
 Agora eu pego as techs do localStorage, verifico se realmente veio alguma coisa, se sim, salvo no estado de `techs`. Se recarregar a página, pode verificar que o array de tech vai vir com o mesmo conteúdo que tem dentro do localStorage.
 
 
-
 A função `componentWillUnmount` é utilizada muito pouco, mas um cenário seria, limpar um event listener. Imagina que você está usando um setTimeout dentro do componentDidMount e quando esse componente sair da tela, o setTimeout ainda continuará funcionando. Então o correto é utilizar o `componentWillUnmount` para limpar o event listener, no caso fazer um `clear` no `setTimeout`.
 
 
-Os métodos mais utilizados são componentDidMout, depois componentDidUpdate e por fim componentWillUnmount, geralmente nessa sequência.
+Os métodos mais utilizados são componentDidMount, depois componentDidUpdate e por fim componentWillUnmount, geralmente nessa sequência.
 
 Fim: [https://github.com/tgmarinho/intro-react/tree/aula11-ciclo-de-vida-do-componente](https://github.com/tgmarinho/intro-react/tree/aula11-ciclo-de-vida-do-componente)
 
