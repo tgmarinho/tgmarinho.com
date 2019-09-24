@@ -1,7 +1,7 @@
 ---
 title: Conceitos do Node
 description: >-
-  Apresento o ambiente, conceitos e características do Node, NPM, Yarm, Event
+  Apresento o ambiente, conceitos e características do Node, NPM, Yarn, Event
   Loop, Call Stack e muito mais
 date: '2019-09-10 06:21:00'
 image: /assets/img/nodejs.png
