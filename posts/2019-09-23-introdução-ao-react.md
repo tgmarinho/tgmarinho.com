@@ -2,7 +2,7 @@
 title: Introdução ao React
 description: >-
   Como configurar o webpack, babel e os loaders do css e imagem, principais
-  ciclo de vidas do React
+  ciclos de vida do React
 date: '2019-09-23 07:17:32'
 image: /assets/img/logo-og.png
 category: dev
