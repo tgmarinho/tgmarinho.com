@@ -163,6 +163,7 @@ export const MainContent = styled.section`
   strong {
     font-weight: 700;
   }
+
   .gatsby-resp-image-background-image {
     z-index: 2;
     opacity: 1 !important;
@@ -183,6 +184,10 @@ export const MainContent = styled.section`
     ${media.lessThan("large")`
       padding: 0;
     `}
+
+    pre {
+      background: var(--code);
+    }
   }
   .instagram-media {
     margin: 1rem auto !important;

@@ -18,7 +18,11 @@ const AboutPage = () => (
       <h1>Sobre mim</h1>
       <p>
         Meu nome é Thiago Marinho de Oliveira, sou apaixonado por{" "}
-        <a href="https://tgmarinho.github.io/resume/" target="_blank">
+        <a
+          href="https://tgmarinho.github.io/resume/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           desenvolvimento de software.
         </a>
       </p>
