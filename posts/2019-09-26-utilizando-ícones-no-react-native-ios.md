@@ -1,22 +1,24 @@
 ---
-title: Utilizando Ícones no React Native - iOS
-description: Como instalar a biblioteca de ícones no React Native na versão 0.61 para iOS
+title: Utilizando ícones do react-native-vector-icons no React Native - iOS
+description: >-
+  Como instalar a biblioteca react-native-vector-icons no React Native na versão
+  0.61 para iOS
 date: '2019-09-26 06:49:36'
 image: /assets/img/react-native.png
 category: mobile
 background: '#03A9F4'
 ---
-Para utilizar ícones no React Native temos que instalar uma lib:
+Para utilizar ícones no React Native temos que instalar a lib:
 
 ```
 yarn add react-native-vector-icons
 ```
 
-Ela vem com vários ícons legais do MaterialIcons, Font Awesome, etc... pra ver todos [clique aqui](https://oblador.github.io/react-native-vector-icons/).
+Ela vem com vários ícones legais do MaterialIcons, Font Awesome, etc... pra ver todos [clique aqui](https://oblador.github.io/react-native-vector-icons/).
 
-E com a versão do RN q estou `"react-native":  "0.61.1",`
+E com a versão do RN q estou utilizando`"react-native":  "0.61.1",` (Fast Reload \o/)
 
-**Não precisamos** fazer:
+**Não precisamos** mais fazer:
 
 ```
 react-native link react-native-vector-icons
@@ -31,14 +33,14 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 Icon.loadFont();
 ```
 
-Sim, esse `Icon.loadFont()`  é obrigatório, se você trocar o MaterialIcons por outra fonte por exemplo:  FontAwesome, esse loadFont() tem que ser chamado novamente, ou seja, é melhor deixar ele no código mesmo que você já tenha executado ele uma vez com uma outra fonte. Interessante colocar essa configuração em um arquivo de configuração, por exemplo: `loadFonts.js`.
+Sim, esse `Icon.loadFont()` é obrigatório, se você trocar o MaterialIcons por outra fonte por exemplo:  FontAwesome, esse loadFont() tem que ser chamado novamente, ou seja, é melhor deixar ele no código mesmo que você já tenha executado ele uma vez com uma outra fonte. Interessante colocar essa configuração em um arquivo de configuração, por exemplo: `loadFonts.js`.
 
-E agora só aplicar o Icon no seu código: 
+Agora só aplicar o `Icon` no seu código: 
 
 ```
 ...
 <SubmitButton>
-	<Icon name="add" size={20} color="#FFF" />
+   <Icon name="add" size={20} color="#FFF" />
 </SubmitButton>
 ...
 ```
