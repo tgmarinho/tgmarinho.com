@@ -2,8 +2,8 @@
 title: Introdução ao React Native
 description: >-
   Minhas notas de aula do bootcamp da RocketSeat, onde construímos em RN um app
-  que pega os dados do usuários do github e mostra os repositórios favoritos de
-  cada um
+  que pega os dados dos usuários do Github e mostra os repositórios favoritos de
+  cada um.
 date: '2019-09-28 09:05:50'
 image: /assets/img/react-native-header.png
 category: mobile
