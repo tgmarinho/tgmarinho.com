@@ -24,7 +24,7 @@ App que busca os usuários do github e mostra os dados básicos e os repositóri
 - React Vector Icons
 - Axios
 
-![Tela de Usuários](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/list-users-intro-rn.png?raw=true)
+https://youtu.be/u_zY3pF6ez8
 
 ## Aula 01 - Conceitos do React Native
 
@@ -1263,7 +1263,7 @@ Pronto, agora só falta o desafio, que será apenas para refinar a aplicação.
 
 Veja abaixo o resultado final até aqui:
  
-![It's working](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/react-native-aula-16.gif?raw=true)
+https://youtu.be/u_zY3pF6ez8
 
 Algumas imagens:
 
