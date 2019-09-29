@@ -22,7 +22,7 @@ yarn create react-app nome-do-projeto
 
 Estou chamando meu projeto de `fron-react` (Frontend com react)
 
-o CRA irá criar toda a estrura que precisamos sem termos que configurar nada.
+o CRA irá criar toda a estrutura que precisamos sem termos que configurar nada.
 
 Toda configuração fica no `react-scripts` que pode ser localizado no `package.json` a referência para a configuração.
 
@@ -121,7 +121,7 @@ Para instalar o prettier e alguns plugins de configuração, vamos rodar no term
 yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
 ```
 
-E agora configuraremos o `.eslintrc`:
+E agora configuramos o `.eslintrc`:
 
 ```
 module.exports = {
@@ -160,7 +160,7 @@ E depois criamos um arquivo `.prettierrc` na raiz do projeto, com a seguinte con
 }
 ```
 
-Isso melhora a integração do prettier com a style guid airbnb que estamos utilizando.
+Isso melhora a integração do prettier com a style guide airbnb que estamos utilizando.
 
 Pronto! Agora o prettier deixa o código mais bonita e o eslint procura por erros na style-guide.
 
@@ -195,7 +195,7 @@ yarn add react-router-dom
 
 E agora podemos criar um arquivo `routes.js` na pasta `src`.
 
-Criamos também uma pasta `pages` que conterá a pasta `Main` com um arquivo chamando  `index.js`. E outra pasta `Repository` com um arquivo chamado `index.js`.
+Criamos também uma pasta `pages` que conterá a pasta `Main` com um arquivo chamado `index.js`. E outra pasta `Repository` com um arquivo chamado `index.js`.
 
 O conteúdo do arquivo vai estar no link do github.
 
@@ -234,7 +234,7 @@ export default function Routes() {
 
 ```
 
-Até aqui criamos um componente Routes que será importado no `App.js`, ele retorna um BrowserRouter que engloba todas as routas para fazer o gerenciamento das rotas na barra de endereço no navegador, e ele tem um filho Switch que é responsável por executar apenas uma rota por vez e dentro dele tem uma ou mais rotas, que são as Route que recebe um path e o seus respectivo Component.
+Até aqui criamos um componente Routes que será importado no `App.js`, ele retorna um BrowserRouter que engloba todas as rotas para fazer o gerenciamento das rotas na barra de endereço no navegador, e ele tem um filho Switch que é responsável por executar apenas uma rota por vez e dentro dele tem uma ou mais rotas, que são as Route que recebe um path e o seus respectivo Component.
 
 Agora só importar a routa no App.js:
 
@@ -250,7 +250,7 @@ function App() {
 export default App;
 ```
 
-Testando a aplicação vamos observer um comportamento não esperado.
+Testando a aplicação vamos observar um comportamento não esperado.
 
 Só conseguimos acessar a rota / que redireciona para o componente Main.
 
@@ -296,7 +296,7 @@ Ela muda a forma de escrever o CSS no React e no React Native.
 
 Agora não usaremos as propriedades style e nem className, o próprio componente será estilizado.
 
-No VSCode tem a extensão do styled-components que é ajuda muito a desenvolver pois ele entende a sintax css de dentro do js.
+No VSCode tem a extensão do styled-components que é ajuda muito a desenvolver pois ele entende a sintaxe css de dentro do js.
 
 O código é escrito com JS e também usamos a sintaxe CSS.
 
@@ -343,7 +343,7 @@ Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula04-styled
 
 ## Aula 05 - Estilos Globais
 
-Sabendo que o estilo de cada componente é local, no  styled componentes temos uma funcionaliade muito legal que são os estilos globais, onde podemos aplicar para todo o restado aplicação.
+Sabendo que o estilo de cada componente é local, no  styled componentes temos uma funcionalidade muito legal que são os estilos globais, onde podemos aplicar para todo o restado aplicação.
 
 Para isso eu crio uma pasta styles com o arquivo global.js dentro da nova pasta.
 
@@ -370,7 +370,7 @@ body {
 `;
 ```
 
-importo a função createGlobalStyle do styledcomponents e passo a configuração CSS de reset e estilos globais e exporto essa função para ser usada no componente pai do projeto.
+importo a função createGlobalStyle do Styled Components e passo a configuração CSS de reset e estilos globais e exporto essa função para ser usada no componente pai do projeto.
 
 E agora uso no App.js:
 
@@ -520,14 +520,14 @@ Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula06-estili
 
 ## Aula 07 - Adicionando repositórios
 
-Quando o usuário digitar o nome de usuário valido, vamos buscar o repostório e salvar no estado.
+Quando o usuário digitar o nome de usuário válido, vamos buscar o repositório e salvar no estado.
 
 Instalamos a lib axios para fazer requisição a API externa.
 
 ```
 yarn add axios
 ```
-E agora podemos configurar um baseURL para fazer requisições passando apenas a rota e os paramêtros de consulta da API.
+E agora podemos configurar um baseURL para fazer requisições passando apenas a rota e os parâmetros de consulta da API.
 
 Crio a pasta `services` dentro da `src` e o arquivo `api.js` dentro da nova pasta, com o conteúdo.
 
@@ -571,13 +571,11 @@ Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula07-add-re
 ## Aula 08 - Listando repositórios
 
 
-
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula08-listando-repositorios](https://github.com/tgmarinho/front-react/tree/aula08-listando-repositorios)
 
 ## Aula 09 - Utilizando LocalStorage 
 
 Vamos salvar os repositórios no localstorage, que é um banco de dados embutido no navegador que armazena chave valor em Strings.
-
 
 
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula09-utilizando-localstorage](https://github.com/tgmarinho/front-react/tree/aula09-utilizando-localstorage)
@@ -586,21 +584,16 @@ Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula09-utiliz
 ## Aula 10 - Navegação de rotas
 
 
-
-
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula10-navegacao-de-rotas](https://github.com/tgmarinho/front-react/tree/aula10-navegacao-de-rotas)
 
 
 
 ## Aula 11 - Carregando dados da API
 
-
-
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula11-carregando-dados-api](https://github.com/tgmarinho/front-react/tree/aula11-carregando-dados-api)
 
 
 ## Aula 12 - Definindo PropTypes
-
 
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula12-definindo-prop-types ](https://github.com/tgmarinho/front-react/tree/aula12-definindo-prop-types)
 
@@ -608,13 +601,10 @@ Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula12-defini
 ## Aula 13 - Exibindo Repositório
 
 
-
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula13-exibindo-repositorio](https://github.com/tgmarinho/front-react/tree/aula13-exibindo-repositorio)
 
 
 ## Aula 14 - Exibindo Issues 
-
-
 
 Fim, código fonte: [https://github.com/tgmarinho/front-react/tree/aula14-exibindo-issues](https://github.com/tgmarinho/front-react/tree/aula14-exibindo-issues)
 
