@@ -15,25 +15,26 @@ App que busca os usuários do github e mostra os dados básicos e os repositóri
 
 ### Stack
 
-- React
-- React Native
-- Styled Components
-- Eslint, Prettier, EditorConfig
-- AsyncStorage
-- React Navigation
-- React Vector Icons
-- Axios
+* React
+* React Native
+* Styled Components
+* Eslint, Prettier, EditorConfig
+* AsyncStorage
+* React Navigation
+* React Vector Icons
+* Axios
 
 https://youtu.be/u_zY3pF6ez8
 
 ## Aula 01 - Conceitos do React Native
 
 ### O que é React Native?
-- Versão do React para o Desenvolvimento Mobile, como o React serve para criar interfaces, o RN é uma lib que permite a criação de interfaces para o dispositivo móvel para Android e iOS. Porém tem algumas diferenças com ReactJS.
-- Ele é multiplataforma, então podemos escrever o mesmo código para iOS e para Android, e podemos ainda manipular algumas particularidades entre os SO.
-- O React Native pega toda a interface construída e converte para Java e Objective-C, ou seja, é você não usa uma webview, mas sim os componentes nativos do sistema operacional que estiver utilizando, o que deixa a experiência de usuário muito melhor e performática.
-- O código não é transpilado, o código vai para uma dependência chamada JSCore o que torna possível escrever código em javascript.
-- A Microsoft tem mais de 40 apps construído com React Native.
+
+* Versão do React para o Desenvolvimento Mobile, como o React serve para criar interfaces, o RN é uma lib que permite a criação de interfaces para o dispositivo móvel para Android e iOS. Porém tem algumas diferenças com ReactJS.
+* Ele é multiplataforma, então podemos escrever o mesmo código para iOS e para Android, e podemos ainda manipular algumas particularidades entre os SO.
+* O React Native pega toda a interface construída e converte para Java e Objective-C, ou seja, é você não usa uma webview, mas sim os componentes nativos do sistema operacional que estiver utilizando, o que deixa a experiência de usuário muito melhor e performática.
+* O código não é transpilado, o código vai para uma dependência chamada JSCore o que torna possível escrever código em javascript.
+* A Microsoft tem mais de 40 apps construído com React Native.
 
 ### Arquitetura
 
@@ -43,39 +44,34 @@ O código Javascript passa para uma ferramenta chamada Metro Bundler (packager) 
 
 imagem da arquitetura
 
-
 ### Sintaxe
 
 pegar do slide
 
-- A declaração de componentes é igual ao da web
-- Não usamos html e sim componentes próprios
-- Aplicamos estilo sem classes ou IDs
-- Todo texto é o <Text /> não existe estilização própria
-- Para criar estilos temos que usar StyleSheet e usar CSS in JS
-- Mas podemos usar styled-components/native
-- [Yoga](https://github.com/facebook/yoga) é responsável de converter o CSS para ObjectiveC e Java
+* A declaração de componentes é igual ao da web
+* Não usamos html e sim componentes próprios
+* Aplicamos estilo sem classes ou IDs
+* Todo texto é o <Text /> não existe estilização própria
+* Para criar estilos temos que usar StyleSheet e usar CSS in JS
+* Mas podemos usar styled-components/native
+* [Yoga](https://github.com/facebook/yoga) é responsável de converter o CSS para ObjectiveC e Java
 
+### O que é EXPO?
 
-### O que é EXPO? 
-
-- SDK com um conjunto de funcionalidades prontas para usar (câmera, vídeo, integrações);
-- Não precisa configurar emulador, ele tem um app Expo e você baixa o seu app de lá, o App fica no App do Expo. 
-- Simplifica bastante o desenvolvimento
+* SDK com um conjunto de funcionalidades prontas para usar (câmera, vídeo, integrações);
+* Não precisa configurar emulador, ele tem um app Expo e você baixa o seu app de lá, o App fica no App do Expo. 
+* Simplifica bastante o desenvolvimento
 
 Geralmente não é bom utilizar, pois limita o controle do código nativo, se precisar mexer no Java ou Objective-C não é possível com Expo;
 Várias libs não tem suporte ao Expo;
 
-
- Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-01-conceitos-react-native](https://github.com/tgmarinho/intro-react-native/tree/aula-01-conceitos-react-native)
-
+ Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-01-conceitos-react-native>
 
 ## Aula 02 - Ambiente de Desenvolvimento
 
 Para configurar o ambiente de desenvolvimento basta seguir os [tutoriais](https://docs.rocketseat.dev/ambiente-react-native/introducao) da Rocketseat, ficou muito boa essa [doc](https://docs.rocketseat.dev/ambiente-react-native/introducao).
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-02-ambiente-desenvolvimento](https://github.com/tgmarinho/intro-react-native/tree/aula-02-ambiente-desenvolvimento)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-02-ambiente-desenvolvimento>
 
 ## Aula 03 - Criando um projeto
 
@@ -101,12 +97,16 @@ npx react-native init MyAwesomeApp
 
 E depois de criar o projeto, no console já mostra o que você deve fazer, então, pode entrar na pasta do projeto, e rodar o emulador: 
 
-- iOS
+* iOS
+
+
 ```
 react-native run-ios
 ```
 
-- Android, o emulador tem que estar aberta antes de rodar o comando.
+* Android, o emulador tem que estar aberta antes de rodar o comando.
+
+
 ```
 react-native run-android
 ```
@@ -125,9 +125,7 @@ react-native start
 
 Se a aplicação já foi instalada, não precisa executar `react-native run-ios` novamente, bastar executar `react-native start`.
 
-
 Abrindo o projeto no VSCode, o arquivo principal de é o App.js onde contém a primeira tela da aplicação.
-
 
 E podemos editar o arquivo para ficar mais simplificado:
 
@@ -172,8 +170,7 @@ A escrita de código de React para Web e para Native é bem semelhante com pouca
 
 ![Emulador React Native](https://raw.githubusercontent.com/tgmarinho/Images/master/bootcamp-rocketseat/rn-emulador-metro-bundler.png)
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-03-criando-projeto](https://github.com/tgmarinho/intro-react-native/tree/aula-03-criando-projeto)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-03-criando-projeto>
 
 ## Aula 04 - ESLint, Prettier e EditorConfig
 
@@ -281,6 +278,7 @@ E também criaremos o arquivo `.prettierrc` para definir mais algumas [regras](h
 	"trailingComma":  "es5"
 }
 ```
+
 Agora toda vez que salvarmos o arquivo o prettier irá trocar as aspas duplas por simples e adicionar `,` em objetos e arrays.
 
 Pronto, agora no App.js você vai ver alguns errinhos e só ajustar conforme a regra do `airbnb` que está no `.eslintrc.js`.
@@ -296,6 +294,7 @@ E com isso o Metro Bundler vai abrir novamente  e a aplicação deve voltar a fu
 Grande partes dos problemas são resolvidos executando os comandos:
 
 1 - Sempre resolve na grande maioria das vezes.
+
 ```
 react-native start --reset-cache
 ```
@@ -303,12 +302,12 @@ react-native start --reset-cache
 ou
 
 2 - Se tiver algum erro que com o passo anterior não resolveu, então rode esse comando, para reinstalar o app no seu emulador novamente.
+
 ```
 react-native run-ios
 ```
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-04-eslint-prettier-editor-config](https://github.com/tgmarinho/intro-react-native/tree/aula-04-eslint-prettier-editor-config)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-04-eslint-prettier-editor-config>
 
 ## Aula 05 - Configurando o Reactotron
 
@@ -344,10 +343,10 @@ if (__DEV__) {
 
   tron.clear();
 }
-
 ```
 
 Isso faz com que o Reactotron só funcione em modo de desenvolvimento.
+
 ```
 if (__DEV__) {...
 ```
@@ -365,11 +364,13 @@ Porém para o eslint não ficar reclamando, temos que declarar essa variavél co
 ```
 
 Criamos uma propriedade `tron` dentro do console com as configurações do reactotron para podermos utilizar sem precisar importar em cada código, basta chamar o `console.tron.log('meu log aqui');` e o log será exibindo da interface do Reactotron.
+
 ```
 console.tron = tron;
 ```
 
 Toda vez que o Reactotron reinicia eu limpo os logs anteriores, isso não é obrigatório, só por gosto mesmo.
+
 ```
  tron.clear();
 ```
@@ -381,6 +382,7 @@ Reactotron.configure({ host:  '127.0.0.1' })
 ```
 
 Se estiver no emulador do Android tem que rodar no terminal:
+
 ```
 adb reverse tcp:9090 tcp: 9090
 ```
@@ -406,9 +408,7 @@ console.tron.log('TESTANDO A CONFIG DO REACTTRON', 2  +  3);
 
 ![IMAGEM DO REACTOTRON](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rn-reactotron.png?raw=true)
 
-
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-05-configurando-reactotron](https://github.com/tgmarinho/intro-react-native/tree/aula-05-configurando-reactotron)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-05-configurando-reactotron>
 
 ## Aula 06 - React Navigation
 
@@ -504,7 +504,6 @@ const Routes = createAppContainer(
 );
 
 export default Routes;
-
 ```
 
 `createAppContainer`:  É como se fosse o BrowserRouter do react-router-dom, que contém as configurações para o roteamento funcionar independente do tipo da rota que estivemos utilizando. Ele engloba todas as rotas.
@@ -571,6 +570,7 @@ Podemos utilizar também react-navigation-drawer, precisamos instalar:
 ```
 yarn add react-navigation-drawer
 ```
+
 E utilizar: 
 
 ```
@@ -659,10 +659,7 @@ Pronto, agora vamos estilizar a página `Main.js`.
 
 Para complementar, leia o artigo: [navegacao-react-native](https://blog.rocketseat.com.br/navegacao-react-native/) da Rocketseat que está excelente e com imagens e gifs para exemplificar melhor.
 
-
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-06-react-navigation](https://github.com/tgmarinho/intro-react-native/tree/aula-06-react-navigation)
-
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-06-react-navigation>
 
 ## Aula 07 - Configurando StatusBar
 
@@ -694,14 +691,14 @@ export default App;
 E poderemos ver que o [StatusBar](https://facebook.github.io/react-native/docs/statusbar) ficou branco no emulador, a hora, barra do wifi e da bateria.
 
 Para o Android a gente passa essa configuração a mais:
+
 ```
 backgroundColor="#7159c1"
 ```
 
 tem outras propriedades também, só apertar cmd ou ctrl + espaço no componente para ver as opções.
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-07-configurando-statusbar](https://github.com/tgmarinho/intro-react-native/tree/aula-07-configurando-statusbar)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-07-configurando-statusbar>
 
 ## Aula 08 - Styled Components
 
@@ -727,7 +724,7 @@ No React Native não tem estilização global igual temos na web, onde estilizam
 
 O que podemos fazer é criar pequenos componentes e reutilizar em vários lugares.
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-08-styled-components](https://github.com/tgmarinho/intro-react-native/tree/aula-08-styled-components)
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-08-styled-components>
 
 ## Aula 09 - Estilizando Formulário
 
@@ -749,7 +746,7 @@ E com a versão do RN q estou `"react-native":  "0.61.1",`
 react-native link react-native-vector-icons
 ```
 
-Mas [precisamos](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) entrar na pasta do `ios` e executar `pod install`, voltar `cd .. ` e executar `react-native run-ios` na raiz do projeto novamente.
+Mas [precisamos](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) entrar na pasta do `ios` e executar `pod install`, voltar `cd ..` e executar `react-native run-ios` na raiz do projeto novamente.
 
 Para utilizar precisamos importar no código, nesse caso estou importando do MaterialIcons.
 
@@ -772,10 +769,9 @@ E agora só aplicar o Icon no seu código:
 
 O restante do código está no commit abaixo.
 
-Fonte: [https://www.tgmarinho.com/utilizando-%C3%ADcones-no-react-native-ios/](https://www.tgmarinho.com/utilizando-%C3%ADcones-no-react-native-ios/)
+Fonte: <https://www.tgmarinho.com/utilizando-%C3%ADcones-no-react-native-ios/>
 
-
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-09-estilizando-formulario](https://github.com/tgmarinho/intro-react-native/tree/aula-09-estilizando-formulario)
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-09-estilizando-formulario>
 
 ## Aula 10 - Acessando API do Github
 
@@ -868,6 +864,7 @@ export default Main;
 ```
 
 Esse código server para fechar o teclado após a operação do método.
+
 ```
 Keyboard.dismiss();
 ```
@@ -882,6 +879,7 @@ returnKeyType="send" //
 // Quando clicar em send chamar essa função
 onSubmitEditing={this.handleAddUser} //
 ```
+
 ```
   // Chama a função para adicionar o usuário
   <SubmitButton onPress={this.handleAddUser}>
@@ -889,9 +887,7 @@ onSubmitEditing={this.handleAddUser} //
 
 Vale ressaltar que toda a chamada a API, o Reactotron faz o log exibe o status e os dados de resposta da requisição, sem precisar ter que colocar o `console.tron.log`.
 
-
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-10-acessando-api-github](https://github.com/tgmarinho/intro-react-native/tree/aula-10-acessando-api-github)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-10-acessando-api-github>
 
 ## Aula 11 - Estilizando a listagem
 
@@ -941,6 +937,7 @@ E adicionamos no final do `</Form>`:
 É muito legal ver que os componentes React Native com apenas estilização, sem lógica, e ainda com estilização separada por componente.
 
 Por fim criamos os componentes estilizados:
+
 ```
 export const List = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false,
@@ -997,9 +994,11 @@ export const ProfileButtonText = styled.Text`
 ```
 
 Destaque para o atributo:
+
 ```
  showsVerticalScrollIndicator: false,
 ```
+
 Serve para o `FlatList` não mostrar a barra de rolagem, dando uma experiência mais legal no app.
 
 ```
@@ -1016,9 +1015,7 @@ Confira o resultado até aqui:
 
 ![Listagem de Usuários do Github](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/lista-dev-intro-rn.png?raw=true)
 
-
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-11-estilizando-listagem](https://github.com/tgmarinho/intro-react-native/tree/aula-11-estilizando-listagem)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-11-estilizando-listagem>
 
 ## Aula 12 - Loading e disabled
 
@@ -1026,13 +1023,14 @@ Vamos colocar um loading quando estiver buscando o usuário na API e diminuir a 
 
 Veja no código fonte!
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-12-loading-disabled](https://github.com/tgmarinho/intro-react-native/tree/aula-12-loading-disabled)
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-12-loading-disabled>
 
 ## Aula 13 - Salvando no Storage
 
 Vamos salvar os dados do usuário no storage do celular, de forma que podemos consultar os valores diretamente do celular se ficarmos sem internet poderemos pegar esses dados, deletar, sem problema algum.
 
 Primeiro vamos instalar a lib:
+
 ```
 yarn add @react-native-community/async-storage  
 ```
@@ -1040,17 +1038,19 @@ yarn add @react-native-community/async-storage
 Depois rodar os comandos:
 
 para iOS: 
+
 ```
 cd ios && pod install & cd ..
 react-native run-ios
 ```
+
 e no Android:
+
 ```
 react-native run-android
 ```
 
 `AsyncStorage` é semelhante ao LocalStorage do navegador, e ele é assíncrono então temos que usar `async/await` do Javascript.
-
 
 Não tem um tamanho limite para salvar no `AsyncStorage`, na verdade dependendo da capacidade de armazenamento do celular do usuário, enquanto estiver espaço em disco, pode armazenar os dados.
 
@@ -1060,7 +1060,7 @@ Para utilizar é muito simples, basta importar:
 import AsyncStorage from  '@react-native-community/async-storage';
 ```
 
-Criar uma constante que armazena uma chave, pois o AsyncStorage é um banco de dados em SQLITE3 ou [https://rocksdb.org/](https://rocksdb.org/) no Android que utiliza chave e valor.
+Criar uma constante que armazena uma chave, pois o AsyncStorage é um banco de dados em SQLITE3 ou <https://rocksdb.org/> no Android que utiliza chave e valor.
 
 ```
 const KEY_ASYNC_STORAGE =  '@intro-rn:users:key';
@@ -1092,8 +1092,7 @@ E quando fazemos um refresh ou saímos e voltamos para a tela de usuários e com
 
 Pronto, agora já temos os dados salvos e podemos alterar, remover, ou adicionar mais, porém em outra chave. 
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-13-salvando-no-storage](https://github.com/tgmarinho/intro-react-native/tree/aula-13-salvando-no-storage)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-13-salvando-no-storage>
 
 ## Aula 14 - Realizando navegação
 
@@ -1132,16 +1131,16 @@ export default function User({ navigation }) {
 }
 ...
 ```
+
 Acessamos os dados chamando a função `getParam` passando a mesma chave `user` que usamos anteriormente.
 
 Pronto, agora os dados do usuário estão logando no Reactotron.
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-14-realizando-navegacao ](https://github.com/tgmarinho/intro-react-native/tree/aula-14-realizando-navegacao )
-
+Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-14-realizando-navegacao ](https://github.com/tgmarinho/intro-react-native/tree/aula-14-realizando-navegacao)
 
 ## Aula 15 - Buscando dados da API
 
-Quando usuário clicar em VER PERFIL o componente de usuário vai mostrar o perfil do usuário e vamos buscar os repositórios que o usuário favoritou dando *start*.
+Quando usuário clicar em VER PERFIL o componente de usuário vai mostrar o perfil do usuário e vamos buscar os repositórios que o usuário favoritou dando _start_.
 
 Primeiro vamos mostrar o header com o nome do usuário.
 
@@ -1192,10 +1191,9 @@ User.propTypes = {
 
 Declaramos o `componentDidMount` como metódo async porque depois de montar a tela, o método vai ser chamado pelo React e vai chamar a api do github para buscar os repositórios que o usuário favoritou.
 
-Por fim, apenas verificamos no Reactotron se a API foi chamada, detalhe que não tem o `console.tron.log`, pois quando é feita um chamada a API o Reactotron já faz o log pra gente *automágicamente*.
+Por fim, apenas verificamos no Reactotron se a API foi chamada, detalhe que não tem o `console.tron.log`, pois quando é feita um chamada a API o Reactotron já faz o log pra gente _automágicamente_.
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-15-buscando-dados-da-api](https://github.com/tgmarinho/intro-react-native/tree/aula-15-buscando-dados-da-api)
-
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-15-buscando-dados-da-api>
 
 ## Aula 16 - Listando favoritos
 
@@ -1257,12 +1255,12 @@ render() {
   }
 ```
 
-Detalhe que estamos utilizando a `FlatList` para poder exibir uma lista dinâmica e *escrolável*.
+Detalhe que estamos utilizando a `FlatList` para poder exibir uma lista dinâmica e _escrolável_.
 
 Pronto, agora só falta o desafio, que será apenas para refinar a aplicação.
 
 Veja abaixo o resultado final até aqui:
- 
+
 https://youtu.be/u_zY3pF6ez8
 
 Algumas imagens:
@@ -1271,10 +1269,75 @@ Algumas imagens:
 
 ![Tela de Repositórios](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/list-repos-starred-intro-rn.png?raw=true)
 
-Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/aula-16-listando-favoritos](https://github.com/tgmarinho/intro-react-native/tree/aula-16-listando-favoritos)
+Código Fonte: <https://github.com/tgmarinho/intro-react-native/tree/aula-16-listando-favoritos>
 
 
 
+## Aula Final - Desafio implementado
+
+### Loading de repositórios
+
+* Adicione um indicator de loading utilizando <ActivityIndicator /> antes de carregar a lista de repositórios favoritados na tela de detalhes do Usuário.
+
+Primeiro eu crio um `ActivityIndicator` customizado para exibir no centro da tela, com uma cor roxa.
+
+```
+export const Loading = styled.ActivityIndicator.attrs({
+  color: '#7159c1',
+  size: 50,
+})`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;
+```
+
+Crio um prop loading com valor true, e seto o loading false após o carregamento, pois depois que a lista é carregada ela não vai ficar sem itens para sair da tela e aparecer o loading. 
+
+### Scroll infinito
+
+Adicione uma funcionalidade de scroll infinito na lista de repositórios favoritados. Assim que o usuário chegar nos **20%** do final de lista, busque pelos items na próxima página e adicione na lista. Seu código ficará da seguinte forma:
+
+```js
+<Stars
+  onEndReachedThreshold={0.2} // Carrega mais itens quando chegar em 20% do fim
+  onEndReached={this.loadMore} // Função que carrega mais itens
+  // Restante das props
+>
+```
+
+Para requisitar uma nova página no Github utilize um parâmetro `page` no fim da URL:
+
+```
+https://api.github.com/users/diego3g/starred?page=2
+```
+
+
+### Pull to Refresh
+
+Adicione uma funcionalidade para quando o usuário arrastar a listagem de repositórios favoritados pra baixo atualize a lista resetando o estado, ou seja, volte o estado da paginação para a página 1 exibindo apenas os 30 primeiros itens.
+
+A funcionalidade "Pull to Refresh" existe por padrão na FlatList e pode ser implementada através do seguinte código:
+
+```js
+<Stars
+  onRefresh={this.refreshList} // Função dispara quando o usuário arrasta a lista pra baixo
+  refreshing={this.state.refreshing} // Variável que armazena um estado true/false que representa se a lista está atualizando
+  // Restante das props
+>
+```
+
+
+### WebView
+
+Crie uma nova página na aplicação que vai ser acessada quando o usuário clicar em um repositório favoritado, essa página deve conter apenas o Header da aplicação. O conteúdo da página será uma WebView, ou seja, um browser integrado que exibe o atributo `html_url` presente no objeto do repositório que vem da API do Github.
+
+Documentação de utilização da WebView: https://github.com/react-native-community/react-native-webview/blob/master/docs/Getting-Started.md
+
+
+Código Fonte: [https://github.com/tgmarinho/intro-react-native/tree/](https://github.com/tgmarinho/intro-react-native/tree/aula-16-listando-favoritos)aula-final-desafio-implementado
+
+Pronto, agora só conferir o resultado!
 
 Créditos da imagem do [post](https://miro.medium.com/max/720/1*BEWiJlbozw80B7RvgbLmxg.png)
-
