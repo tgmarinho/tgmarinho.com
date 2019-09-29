@@ -10,6 +10,8 @@ Olá, agora estou utilizando o [Gatsby](https://gatsbyjs.org) para manter meu bl
 
 Eu aprendi o Gatsby nesse [curso](https://willianjusten.com.br/novo-curso-gatsby-crie-um-site-pwa-com-react-graphql-netlify-cms/) do [Willian Justen](http://willianjusten.com.br).
 
+Massa do Gatsby é poder usar React, GraphQL, Markdown, SEO, Netifly e NetlifyCMS e aproveitar dos recursos otimizados que ele oferece de performance para exibir imagem, prefetch de links, e outras coisas mais! Com gatsby vc pode ter com mais facilidade 100% de pontuação no Lighthouse do Google :smiley:
+
 **Aprender a aprender**
 
 Eu sempre estou tentando aprender algo, e uma delas é aprender a aprender, hoje eu aprendi a aprender mais do que ontem, amanhã acho que vou aprender a aprender mais (que frase complicada). Uma das formas que encontrei é comprar um curso e ir até o fim, ler um livro e ir até o fim, rascunhar e fazer notas de aula, não ter ansiedade para concluir logo, digerir o conteúdo e escrever sobre ele de forma pública.
