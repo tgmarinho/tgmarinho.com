@@ -8,6 +8,11 @@ publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "assets/img"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
