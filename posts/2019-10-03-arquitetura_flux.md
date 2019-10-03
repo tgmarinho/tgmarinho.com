@@ -1,14 +1,19 @@
 ---
-title: Arquitetura Flux
+title: Arquitetura Flux um Ecommerce da Rocketshoes
 description: >-
-  Vamos aprender o Flux com a implementação do Redux, usando Redux Saga para
-  fazer o side effects das funcionalidades assíncronas
+  Vamos construir um ecommerce da Rockectshoes para aprender o Flux com a
+  implementação do Redux, usando Redux Saga para fazer o side effects das
+  funcionalidades assíncronas
 date: '2019-10-03 03:47:17'
 image: /assets/img/arquitetura_flux.png
 category: dev
 background: '#EB7728'
 ---
-### Vamos utilizar o Redux para explicar o Flux.
+Vamos construir um ecommerce do zero bem bonito com Create React App utilizando o Redux, veja as imagens no final do post.
+
+Essas são as minhas notas de aula do Bootcamp da Rocketseat:
+
+### Utilizaremos o Redux para explicar o Flux.
 
 ## Aula 01 - Conceitos de Redux
 
