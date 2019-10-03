@@ -1,17 +1,18 @@
 ---
-title: Arquitetura Flux
+title: Arquitetura Flux - Ecommerce da Rocketshoes
 description: >-
-  Vamos aprender o Flux com a implementação do Redux, usando Redux Saga para
-  fazer o side effects das funcionalidades assíncronas
+  Vamos construir um ecommerce da Rocketshoes para aprender o Flux com a
+  implementação do Redux, usando Redux Saga para fazer o side effects das
+  funcionalidades assíncronas
 date: '2019-10-03 03:47:17'
 image: /assets/img/arquitetura_flux.png
 category: dev
 background: '#EB7728'
 ---
-# Vamos aprender a Arquitetura flux
+Essas são as minhas notas de aula do Bootcamp da Rocketseat:
+
 
 ### Vamos utilizar o Redux para explicar o Flux.
-
 
 ## Aula 01 - Conceitos de Redux
 
@@ -1934,6 +1935,6 @@ Código: [https://github.com/tgmarinho/rocketshoes/tree/aula-26-navegacao-no-sag
 
 Veja o resultado final:
 
-[HOME](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-home.png?raw=true)
+![HOME](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-home.png?raw=true)
 
-[CART](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-cart.png?raw=true)
+![CART](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-cart.png?raw=true)
