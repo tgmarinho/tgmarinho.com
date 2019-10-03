@@ -1931,3 +1931,9 @@ Pronto, aplicação concluída, estamos manjando de React, Redux, Saga, React-ro
 
 
 Código: [https://github.com/tgmarinho/rocketshoes/tree/aula-26-navegacao-no-sagas](https://github.com/tgmarinho/rocketshoes/tree/aula-26-navegacao-no-sagas)
+
+Veja o resultado final:
+
+[HOME](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-home.png?raw=true)
+
+[CART](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/rocketshoes-cart.png?raw=true)
