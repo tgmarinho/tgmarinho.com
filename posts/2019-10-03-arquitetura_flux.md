@@ -1,8 +1,8 @@
 ---
 title: Arquitetura Flux
 description: >-
-  Vamos aprender o Flux com  a implementação do Redux, e ainda usando Redux
-  Sagas para fazer o side effects das funcionalidades assíncronas
+  Vamos aprender o Flux com a implementação do Redux, usando Redux Saga para
+  fazer o side effects das funcionalidades assíncronas
 date: '2019-10-03 03:47:17'
 image: /assets/img/arquitetura_flux.png
 category: dev
