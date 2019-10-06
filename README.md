@@ -8,7 +8,7 @@
   </a>
 </p>
 <h1 align="center">
- Blog's Thiago Marinho made with Gatsby
+ Thiago Marinho's blog made with gatsby
 </h1>
 
 
