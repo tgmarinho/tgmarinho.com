@@ -16,9 +16,11 @@ Veja:
 
 É só pegar os dados do **reducer** de **user** usando **useSelector** do **React Redux** (Hooks):
 
-`const profile = useSelector(state => state.user.profile);`
+```
+const profile = useSelector(state => state.user.profile);
+```
 
-Passar para dentro de`initialData={profile}` do Form
+Passar para dentro de `initialData={profile}` do Form
 
 Os Inputs precisam ter apenas a propriedade name com o mesmo nomes dos campos que vem da **api** ou dos valores dos **reducers**.
 
