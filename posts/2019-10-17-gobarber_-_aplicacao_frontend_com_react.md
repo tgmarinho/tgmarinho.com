@@ -1011,6 +1011,7 @@ Agora criar um cadastro novo do GoBarberWeb
 
 * Criei uma action nova `signUpRequest` que recebe nome, email e senha do usuário
 * No saga criei uma nova função signUp que ouve as chamadas da action de SIGN_UP_REQUEST:
+
 ```
 export function* signUp({ payload }) {
   try {
@@ -1034,6 +1035,7 @@ export default all([
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
   takeLatest('@auth/SIGN_UP_REQUEST', signUp),
 ]);
+
 ```
 
 * E no index.js do componente SignUp disparei a action com os dados do usuário.
@@ -1048,6 +1050,7 @@ Algumas rotas que formos acessar da nossa API temos que estar autenticado e envi
 E para fazer isso precisamos disponibilizar o token no header de Authorization da nossa chamada post da api do axios.
 
 Portanto, assim que fizermos o login iremos inserir o `Baerer token` no `api.defaults.headers.Authorization`
+
 
 ```
  api.defaults.headers.Authorization = `Baerer ${token}`;
@@ -1064,6 +1067,7 @@ takeLatest('persist/REHYDRATE', setToken),
 Essa action executa o `setToken` para que ele faça a mesma coisa que fizemos acima, adicionando o baerer no header.
 
 Essa action busca os dados do localStorage e o token está lá e é disponibilizado:
+
 ```
 export function setToken({ payload }) {
   if (!payload) return;
@@ -1075,6 +1079,7 @@ export function setToken({ payload }) {
 ```
 
 Código completo do saga:
+
 ```
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
@@ -1346,7 +1351,7 @@ Chamo a api fazendo um post, ou seja enviando o arquivo na rota `files` que minh
     setPreview(url);
   }
 ```
-Por fim, o código React que possue a imagem de perfil e o input com o arquivo, se o preview tiver a url do avatar do usuário, então mostra ela senão mostra uma imagem genérica da api adorable.
+Por fim, o código React que possui a imagem de perfil e o input com o arquivo, se o preview tiver a url do avatar do usuário, então mostra ela senão mostra uma imagem genérica da api adorable.
 O input upload de imagem é do tipo file, com id avatar para htmlFor="avatar" fazer o papel do label, ela aceita só imagens, e tem um [data-set](https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLElement/dataset) que recebe o file que é o id do arquivo, e o onChange executa a função handleChange que envia o avatar para api, por fim o ref que é a referência para o input para o React controlar.
 
 ```
