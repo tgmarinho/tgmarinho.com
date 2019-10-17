@@ -1,5 +1,5 @@
 ---
-title: GoBarber - Aplicação Frontend com React
+title: GoBarber Web - Aplicação Frontend com React
 description: >-
   Minhas notas de aula e código do bootcamp da Rocketseat, nesse projeto criamos
   o frontend em React que consome a API GoBarber
@@ -1414,14 +1414,17 @@ código: [https://github.com/tgmarinho/gobarber-web/tree/aula-30-listando-agenda
 
 
 Resultado Final:
+* Cadastro
+![](https://raw.githubusercontent.com/tgmarinho/Images/master/bootcamp-rocketseat/gobarber-web-signup.png)
 
-![](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/gobarber-web-signup.png)
+* Profile
+![](https://raw.githubusercontent.com/tgmarinho/Images/master/bootcamp-rocketseat/gobarber-web-profile.png)
 
-![](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/gobarber-web-profile.png)
+* Dashboard
+![](https://raw.githubusercontent.com/tgmarinho/Images/master/bootcamp-rocketseat/gobarber-web-dash2.png)
 
-![](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/gobarber-web-dash2.png)
-
-![](https://github.com/tgmarinho/Images/blob/master/bootcamp-rocketseat/gobarber-web-dash.png.png)
+* Dashboard 2
+![](https://raw.githubusercontent.com/tgmarinho/Images/master/bootcamp-rocketseat/gobarber-web-dash.png.png)
 
 
 
