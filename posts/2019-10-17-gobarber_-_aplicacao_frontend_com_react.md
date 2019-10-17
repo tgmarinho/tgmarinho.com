@@ -342,7 +342,7 @@ E na pasta `src` vamos criar as pastas `pages`, `services` e `routes`  e um arqu
 
 Veja no código a configuração das rotas e do history.
 
-Código: [https://github.com/tgmarinho/gobarber-web/tree/aula-02-configurando-rotas](https://github.com/tgmarinho/gobarber-web/tree/aula-02-configurando-rotas)
+Código: [https://github.com/tgmarinho/gobarber-web/tree/aula-03-configurando-rotas](https://github.com/tgmarinho/gobarber-web/tree/aula-03-configurando-rotas)
 
 ## Aula 04 - Configurando o Reactotron
 
