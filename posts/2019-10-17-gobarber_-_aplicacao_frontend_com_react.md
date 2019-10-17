@@ -1308,8 +1308,8 @@ O ref.current é isso:
 ```
 É o input =)
 
-Confesso que eu sei o q está acontencendo mas não sei como! Oo #buguei
-![https://www.youtube.com/watch?v=p1h3gaCIICA](https://www.youtube.com/watch?v=p1h3gaCIICA)
+Confesso que eu sei o q está acontecendo mas não sei como! Oo #buguei
+[https://www.youtube.com/watch?v=p1h3gaCIICA](https://www.youtube.com/watch?v=p1h3gaCIICA)
 
 React é isso, não sei o que aconteceu, só sei que aconteceu! 
 
