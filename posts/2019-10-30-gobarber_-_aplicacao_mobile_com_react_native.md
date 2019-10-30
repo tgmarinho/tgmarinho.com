@@ -370,10 +370,10 @@ E assim vai acessar a rota que foi solicitada de dentro desse grupo, seja a rota
 Observe que nas telas de SignIn e SignUp estou usando `createSwitchNavigator` pois não preciso de nenhum feedback visual nessas rotas. Agora na rota de Dashboard estou usando `createBottomTabNavigator` que cria um botão no inferior da tela com o nome da rota (Dashboard) e tudo isso pode ser customizado, é o que iremos fazer na próxima aula. Legal que cada tela pode ter um tipo de navegação através desses agrupamentos.
 
 * routes.js:
+
 ```
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 
@@ -396,6 +396,7 @@ export default (isSigned = false) =>
       }
     )
   );
+
 ```
 
  Criei um outro arquivo `App.js` dentro da `src` e o arquivo `index.js` renomei o componente para `Index`, fiz isso para poder importar o App dentro de index.js e no App.js poder acessar os reducers da store, para poder verificar se o usuário está logado para determinar o valor que será passado como parâmetro na função que cria a rota, lembrando que o arquivo routes agora recebe uma função e retorna outra função, ela se tornou um [High Order Component](https://www.tgmarinho.com/high-order-functions-%E2%80%94-easy-mode/), [outro artigo.](https://www.tgmarinho.com/b%C3%A1sico-sobre-composicao-de-componentes/), mais um [post sobre HOC](https://www.tgmarinho.com/funcao-de-ordem-superior-com-reduce/). No index.js da pasta `src` importamos o App e trocamos pelos Routes, uma vez que o Routes foi para o arquivo App.js.
@@ -403,6 +404,7 @@ export default (isSigned = false) =>
 Basicamente esse lance entre o index.js e o App.js ocorreu pois não tinhamos como acessar o store de dentro do index.js onde estávamos passando o Provider, por isso separamos essas configurações, agora perceba que o App ficou dentro do Provider e dessa forma o App tem acesso aos reducers da store.
 
 * App.js:
+
 ```
 import React from 'react';
 import { useSelector } from 'react-redux';
@@ -430,7 +432,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store';
 
 import App from './App';
-
+routes.js:
 export default function Index() {
   return (
     <Provider store={store}>
