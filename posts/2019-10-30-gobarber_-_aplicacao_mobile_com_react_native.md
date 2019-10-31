@@ -27,7 +27,7 @@ Código: [https://github.com/tgmarinho/gobarberRN/tree/aula-01-estrutura-projeto
 
 ## Aula 02 - Configurando Root Import
 
-Root Import se não sabe, é a ferramenta que permite fazemos imports de forma mais fácil, exemplo:
+`Root Import` se você não sabe, é a ferramenta que permite fazemos imports de forma mais fácil, exemplo:
 
 Como é:
 ```
@@ -48,7 +48,7 @@ yarn add babel-plugin-root-import eslint-import-resolver-babel-plugin-root-impor
 
 No React Native temos acesso as configurações do Babel, no Create React App não, por isso fizemos outras configurações usando o react-app-rewired por exemplo.
 
-Então no `babel.config.js` adiciono um plugin babel-plugin-root-import e informo a pasta raiz do código:
+Então no `babel.config.js` adiciono um plugin `babel-plugin-root-import e informo a pasta raiz do código:
 
 ```
 module.exports = {
@@ -77,7 +77,7 @@ E no `eslintrc.js`:
   },
 ```
 
-Crio também o arquivo `jsconfig.json` que ajuda na importação dos arquivos, e para pode acessar os arquivos:
+Crio também o arquivo `jsconfig.json` que ajuda na importação dos arquivos, e para pode acessar os arquivos clicando no caminho da importação:
 
 ```
 {
@@ -115,9 +115,9 @@ Depois só rodar o comando:
 ```
 yarn run jetify 
 ```
-Para corrigir as bibliotecas. Ele conserta as libs para a arquitetura do AndroidX.
+Jetifify server para corrigir as bibliotecas. Ele conserta as libs para a arquitetura do AndroidX. (Talvez não precise mais disso na versão atual do React Native 0.61++)
 
-Para o React Navigation funcionar precisamos  configurar um arquivo Java do Android, conforme a [documentação](https://reactnavigation.org/docs/en/getting-started.html).
+Para o React Navigation funcionar precisamos configurar um arquivo Java do Android, conforme a [documentação](https://reactnavigation.org/docs/en/getting-started.html).
 
 Após isso só executar o comando para o ios ou android, em qual vc estiver emulando durante o desenvolvimento:
 
@@ -228,7 +228,7 @@ Código: [https://github.com/tgmarinho/gobarberRN/tree/aula-06-pagina-signin](ht
 
 ## Aula 07 - Página SignUp
 
-* Basicamente só copiar a colar do SignIn e adicionar um campo e trocar os labels
+* Basicamente só copiar e colar do SignIn e adicionar um campo e trocar os labels
 
 Código: [https://github.com/tgmarinho/gobarberRN/tree/aula-07-pagina-signup](https://github.com/tgmarinho/gobarberRN/tree/aula-07-pagina-signup)
 
@@ -516,7 +516,7 @@ Código: [https://github.com/tgmarinho/gobarberRN/tree/aula-22-selecionando-hora
 
 ## Aula 23 - Confirmando Agendamento 
 
-* Implementei a estilização da confirmação de agendamento e seu comportamento, quando o usuario cai nessa rota, ele recebe o provider e o time como parâmetro, mostro na tela os dados e quando ele clica no botão confirmar é finalizado o fluxo e o agendamento é concluído. Para finalizar falta agora implementar a atualização de lista de agendamentos.
+* Implementei a estilização da confirmação de agendamento e seu comportamento, quando o usuario cai nessa rota, ele recebe o provider e o time como parâmetro, exibo na tela os dados e quando ele clica no botão confirmar é finalizado o fluxo e o agendamento é concluído. Para finalizar falta agora implementar a atualização de lista de agendamentos.
 
 Código: [https://github.com/tgmarinho/gobarberRN/tree/aula-23-confirmando-agendamento](https://github.com/tgmarinho/gobarberRN/tree/aula-23-confirmando-agendamento)
 
