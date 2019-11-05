@@ -2,7 +2,7 @@
 title: Como acessar o Redis de dentro do Docker e fazer consultas
 description: >-
   Vamos conectar com a instância do Redis que está rodando no Docker e consultar
-  nas chaves para obter seus respectivos valores 
+  as chaves para obter seus respectivos valores 
 date: '2019-11-05 03:35:13'
 image: /assets/img/redis.png
 category: dev
