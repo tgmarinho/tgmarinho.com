@@ -274,85 +274,52 @@ module.exports = {
 };
 ```
 
-Pronto para cada query e mutation definido no schema temos que ter o resolver, o schema só declara o tipo e é usado para consulta, mas quem realiza a consulta de fato é o resolver, o resolver pode ser implemetado de qualquer forma pode buscar uma api, no banco de dados sql com postgres com mongo db, etc. E o legal q o schema só defini o que u usuário quer, e o resolver q se resolva para trazer isso conforma o esquema descrito ou seja conforme as regras e tipos definitos no schema. Veja bem,  o resolve pode buscar uma tonelada de dados, mas o que realmente importa e o que vai para o usuário é o que está defintido no tipo (typeDef) ou seja no schema.graphql. Se eu retorno do resolver um dado a mais q não está definido no tipo o grapqhal nao vai trazer para o usuário inclusive esse é um erro comum de implemtar o backend, vc colocar no resolver para trazaer um dado, mas ele nao aparece na tela e vc vai ver q esqueceu de ter definido no schema. Schema é a regra e a regra é clara, "se tá, tá se não tá não tá"! Bora voltar para o código.
-
+Pronto, para cada query e mutation definido no schema temos que ter o resolver, o schema só declara o tipo e é usado para consulta, mas quem realiza a consulta de fato é o resolver, o resolver pode ser implementado de qualquer forma, pode buscar uma api, ou ir no banco de dados com postgres ou com mongodb, etc. E o legal que o schema só define o que o usuário quer, e o resolver que se resolva para trazer isso conforme o esquema descrito ou seja conforme as regras e tipos definidos no schema. Veja bem, o resolver pode buscar uma tonelada de dados, mas o que realmente importa e o que vai para o usuário é o que está definido no tipo (typeDef) ou seja no schema.graphql. Se eu retorno do resolver um dado a mais que não está definido no tipo o graphql não vai trazer para o usuário, inclusive esse é um erro comum na hora implementar o backend você colocar no resolver para trazer um dado, mas ele não aparece na tela e você vai ver que esqueceu de ter definido o campo no schema. Schema é a regra e a regra é clara, "se tá, tá se não tá não tá"! Bora voltar para o código.
 
 Para testar vamos criar um array estático de usuários dentro de resolvers.js.
 
-
-
-const users = [
-
-{
-
-id:  1,
-
-name:  "Thiago",
-
-email:  "tgmarinho@gmail.com"
-
-},
-
-{
-
-id:  2,
-
-name:  "Diego",
-
-email:  "diego@rocketseat.com"
-
-}
-
+```
+const users = [{
+  id: 1,
+  name: "Thiago",
+  email: "tgmarinho@gmail.com"
+ },
+ {
+  id: 2,
+  name: "Diego",
+  email: "diego@rocketseat.com"
+ }
 ];
 
-  
+module.exports = {
+ Query: {
+  users: () => {},
+  user: () => {}
+ },
 
-module.exports  = {
-
-Query: {
-
-users: () => {},
-
-user: () => {}
-
-},
-
-  
-
-Mutation: {
-
-createUser: () => {}
-
-}
-
+ Mutation: {
+  createUser: () => {}
+ }
 };
+```
 
-
-e o mesmo formato de array é que estou usando no type User do schema.graphql.
+E o mesmo formato de array é que estou usando no type User do schema.graphql.
 
 
 E para testar na nossa query faremos:
 
+```
 Query: {
-
-users: () => users,
-
-user: () => users[0]
-
+ users: () => users,
+ user: () => users[0]
 },
+
 Mutation: {
-
-createUser: () => {
-
-users[1];
-
+ createUser: () => users[1];
 }
+```
 
-}
-
-dessa forma quando a funcao users for chamdaa retorna o array de users e quando user for chamado vamos retornar o primeiro item do array.  e quando chamar o createUser vamos só retornar um usuário pra ver se está funcionando algo. E vamos implemetando devagar conforme deve ser feito.
-
-
+Dessa forma quando a função users for chamada, ela retorna o array de users, e quando user for chamado vamos retornar o primeiro item do array, e quando chamar o createUser vamos só retornar um usuário pra ver se está funcionando. E vamos implementando devagar.
 
 E pra testar só executar no terminal na raiz do projeto:
 
@@ -362,55 +329,58 @@ node src/server.js
 
 Se não ocorreu nenhum erro é só ir no navegador.
 
-Eu não defini a porta onde o servidor vai ser executado, mas nesse caso vai ser na porta padrão do servidor q estamos usando e na porta 4000 então no navegador:
+Eu não defini a porta onde o servidor vai ser executado, mas nesse caso vai ser na porta padrão do servidor que estamos usando, é na porta 4000 então no navegador:
 
 [http://localhost:4000/](http://localhost:4000/)
 
-e o playground bonitão do graphql vai ser exibido
+E o playground bonitão do Graphql Yoga vai ser exibido.
 
+Só fazer as queries para pegar id, name  e email de todos os usuários, se não quiser pode tirar o email por exemplo.
 
-E só fazer as queries para pegar id, name  e email de todos os usuários, se não quiser pode tirar o email por exemplo.
-
+```
 query {
-  users {
-    id
-    name
-    email
-  }
+ users {
+  id name email
+ }
 }
+```
 
-Para pegar o usuário com id
+Para pegar o usuário com id:
+
+```
 {
-	user(id: 1) {
-	id
-	name
+ user(id: 1) {
+  id name
+ }
 }
-}
+```
 
 E também podemos chamas as mutations:
-
+``
 mutation {
   createUser(name: "Thiago", email: "tg@gmail.com"){
     id
     name
   }
 }
+``
 
-Veja como é rápido e produtivo, muito mais rápido api rest.
+Veja como é rápido e produtivo, muito mais rápido que testar com API Rest usando Insomnia.
 
-Agoramos vamos incrementar mais, vamos começar a salvar no banco dedados, no nosso caso vamos usar o mongodb com o mongoose para facilitar mais ainda.
+Agora vamos incrementar mais, vamos começar a salvar no banco de dados, no nosso caso vamos usar o mongodb com o mongoose para facilitar mais ainda.
 
-Eu já tenho uma banco de dados no mongo executando em container docker.
+Eu já tenho uma banco de dados com mongo executando em container docker.
 
-só vou inicializar: docker start mongo
+Só vou inicializar: docker start mongo
 
-e instalar as dependência do mongoose:
+e instalar a dependência do mongoose:
 
 ```
 yarn add mongoose
 ```
 
 E vou conectar com o mongodb no arquivo server.js:
+
 ```
 const { GraphQLServer } =  require("graphql-yoga");
 
