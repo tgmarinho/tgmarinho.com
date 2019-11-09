@@ -97,212 +97,158 @@ Query e Mutation é o mais comum e mais utilizado para começar pois com ambos �
 Podemos fazer múltiplas atualizações, consultas na mesma requisição ao backend. Diferente da API Rest, no site [how-to-graphql](https://www.howtographql.com/basics/1-graphql-is-the-better-rest) mostra muito bem isso.
 
 
-posso fazer:
+Posso fazer:
+
 ``
 {
-	 mutation updateUser {
-		updateUser(id: 1) {
-			nome: "Thiago"
+ mutation updateUser {
+  updateUser(id: 1) {
+   nome: "Thiago"
+  }
+  query users {}
+ }
 }
+``
 
-query users{
+No exemplo acima estou atualizado o nome do usuário de id: 1 para Thiago e na segunda estou trazendo todos os usuários.
 
-}
-	}
-
-}
-
-no exemplo acima estou atualizado o nome do usuário de id para Thiago e na seegunda estou trazendo todos os usuários.
-
-
-O Frontend tem mais responsabilidades na aplicação, o backend manda as informações, mas o frontend pode buscar de forma diferente. Um frontend web pode buscar os dados de um jeito e no mobile faz de outra forma, e o graphql ajuda demais nisso, pq antes tinha q fazer controllers difernetes para rotas diferentes rota para mobile rota para web e com graphql agora a gente só mudar a consulta.
-
-{
-	query users {
-		users({per_page: 20, page: 2, filter: {name: {"starts_with": "Thiago }} }) {
-		id
-		name
-		age
-	time {
-	id
-	title
-}
-		}
-}
-}
+O Frontend tem mais responsabilidades na aplicação, o backend manda as informações, mas o frontend pode buscar de forma diferente. Um frontend web pode buscar os dados de um jeito e no mobile faz de outra forma, e o graphql ajuda demais nisso, porque antes tinhamos que fazer controllers diferentes para rotas no mobile e para rotas web e com graphql só mudar a consulta.
 
 Se vc não precisar de um registro só deletar na query =)
 
-A gente resolver muito o problema de overfetching vamos mostrar na tela só o que precisa, e não todos os dados q uma API Rest estaria trazendo.
+A gente resolve muito o problema de overfetching, vamos mostrar na tela só o que precisa, e não todos os dados que uma API Rest estaria trazendo.
 
-Graphql já documenta nosso backend, parametros, tipos, etc
+Graphql já documenta nosso backend, parametros, tipos, etc, tudo isso graças ao schema que definimos os tipos de dados que esperamos receber e enviar como parâmetro.
 
-tudo isso graças ao schema que definimos os tipos.
+## Vamos ver na prática - Show me the Code
 
-Vamos ver na prática
+Crio uma pasta no meu workspace
 
+```
+mkdir graphql-intro-blog && cd graphql-intro-blog
+```
 
-Criar uma pasta no seu workspace
+Inicio um projeto node.
+```
+yarn  init  -y
+```
 
-❯  mkdir graphql-intro-blog && cd graphql-intro-blog
+Abro o editor de código VSCODe
+```
+code .
+```
 
-Iniciar um projeto node.
-❯  yarn  init  -y
+Precisamos escolher um framework para poder fazer o backend com graphql.
 
-Abrir o editor de código VSCODe
-❯  code .
+Geralmente para fazer API Rest ou qualquer outro projeto para web temos o `express` amplamente usado e difundido na comunidade.
 
+Podemos usar o `express` também porém com algumas funcionalidades a mais, então nesse caso vamos usar o `graphql-yoga` que é um wrapper do `express` por baixo dos panos, e ele tem um playground integrado.
 
-Preicsamos escolher um framework para poder fazer o backend com graphql.
+Adiciono a dependência: 
 
-geralmente para fazer api rest ou qualquer outro projeto para web temos o express amplamente usado e disseminado na comunidade.
+```
+yarn add graphql-yoga                                                                         
+```
 
-Podemos usar o express também porém com algumas funcionalidades a mais, então nesse caso vamos usar o graphql-yoga que é um wrapper do express por baixo dos panos, e ele tem um playground integrado.
+Crio uma pasta `src` com um arquivo `server.js` para configurar o servidor.
 
-❯ yarn add graphql-yoga                                                                         
-
-Crio uma pasta src com um arquivo server.js
-
-E vamos configurar o servidor:
+Vamos configurar o servidor:
 
 ```
 import { GraphQLServer } from  "graphql-yoga";
 
-  
-
 const server =  new  GraphQLServer({
 
 });
-
-  
 
 server.start();
 ```
 
-Dessa maneira o server já funciona. Mas precisamos definir as rotas
+Dessa maneira o server já funciona. Mas precisamos definir as rotas.
 
-Para definir as rotas da aplicação, vamos criar um schema.graphql
+Para definir as rotas da aplicação, vamos criar um `schema.graphql` na pasta `src`.
 
 Eu tenho dois tipos de rotas:
 
-type  Query {
-
-  
-  
+```
+type Query {  
 
 }
 
-  
-  
-
-type  Mutation {
-
-  
-  
+type Mutation {  
 
 }
+```
 
-Query quando quero buscar informacào e mutation quando quero alterar.
+`Query` quando quero buscar informação e mutation quando quero alterar.
 
-
-o schema.graphql é fortemente tipado, tudo tem um tipo.
+O schema.graphql é fortemente tipado, tudo tem um tipo.
 
 Por exemplo se eu quero uma query que busca os usuários teria que fazer assim:
 
-type  Query {
-
-users: [User!]
-
+```
+type Query {
+ users: [User!]
 }
 
-type  User {
-
-id:  ID!
-
-name:  String!
-
-email:  String!
-
+type User {
+ id: ID!
+  name: String!
+  email: String!
 }
+``
 
-users: retorna um array de User, e veja que user é um tipo, é um formato de como os dados devem chegar com o tipo e nome. esses tipos não são necessariamente os tipos e variaveis do banco de dados, esse é como os tipos tem q ser disponibilizados no graphql, vai ter alguém que resolve isso ai. 
+`users`: retorna um array de `User`, e veja que `user` é um tipo, é um formato de como os dados devem chegar com o tipo e nome. esses tipos não são necessariamente os tipos e variáveis do banco de dados, esse é como os tipos tem que ser disponibilizados no Graphql, vai ter alguém que resolve isso ai. 
 
 o ponto de exclamação "!" informa que o dado é obrigatório. sempre o id vai ser obrigatório.
 
-E podemos ter uma rota que retorna um único usuário 
+E podemos ter uma rota que retorna um único usuário: 
 
-type  Query {
-
-users: [User!]
-
-user(id:  ID!):  User
-
-}
-
-Veja crio a rota query user que recebe obrigatoriamente um id como parametro e ela retorna um User.
-
-Criaremos mais uma rota, 
-type  Mutation {
-
-  
-
-createUser(name:  String!, email:  String!):  User
-
-  
-
-}
-
-
-Dessa vez criamos uma mutation que quando chamar createUser receberemos obrigatóriamente um name e email e ela retorna um user. Nesse caso vai ser criado um novo usuário com esses parametros e o mesmo vai ser retornado.
-
-Pronto definimos uma regra, e agora quem vai implemetar isso ai, quem resolve essa parada?
-
-
-Eu falei rotas para designar as queries e mutattion mas o nome real e sem analogia é schema, isso é uma schema do graphql. Vamos começar a aaceitar o padrão que o graphql nos dá!
-
-Agora no server temos uma propriedade typeDefs que recebe o schema que criamos:
 ```
-const { GraphQLServer } =  require("graphql-yoga");
+type Query {
+ users: [User!]
+ user(id: ID!): User
+}
+```
 
-const path =  require("path");
+Veja, crio a rota query user que recebe obrigatoriamente um id como parâmetro e ela retorna um User.
 
-const server =  new  GraphQLServer({
+Criaremos mais uma rota:
 
-typeDefs: path.resolve(__dirname, "schema.graphql")
+```
+type Mutation {
+ createUser(name: String!, email: String!): User
+}
+```
 
+Dessa vez criamos uma mutation que quando for chamado o `createUser` receberemos obrigatoriamente um name e email e ela retorna um User. Nesse caso vai ser criado um novo usuário com esses parâmetros e o mesmo vai ser retornado.
+
+Pronto definimos uma regra, e agora quem vai implementar isso ai, quem resolve essa parada? Vamos ver mais pra frente.
+
+
+Eu falei rotas para designar as queries e mutation mas o nome real e sem analogia ao Rest, é Schema, isso é uma schema do graphql. Vamos começar a aceitar o padrão que o graphql nos dá!
+
+Agora no server.js temos uma propriedade `typeDefs que recebe o schema que criamos:
+
+```
+const { GraphQLServer } = require("graphql-yoga");
+const path = require("path");
+
+const server = new GraphQLServer({
+ typeDefs: path.resolve(__dirname, "schema.graphql")
 });
 
-server.start(); 
+server.start();
 ```
 
-Voltando para analogia, temos mais uma vez se o typeDefs ou o schema é a rota, falta o controller, no graphql temos os resolvers.
+Voltando para analogia, temos mais uma vez se o typeDefs ou o schema é a rota, falta o Controller, no graphql temos os resolvers que fazem o papel do controller.
 
-Então vamos criar o resolver:
+Então vamos criar o resolver na pasta `src/resolvers.js`:
 
-src/resolvers.js
+```
 
-module.exports  = {
 
-  
-
-Query: {
-
-  
-
-},
-
-  
-
-Mutation: {
-
-  
-
-}
-
-  
-
-}
-
+```
 
 Temos as queries e mutation então vamos criar um resolver para query e outro para mutation.
 
