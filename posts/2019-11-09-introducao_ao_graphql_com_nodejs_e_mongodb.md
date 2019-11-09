@@ -38,24 +38,29 @@ Temos uma única rota para buscar, atualizar, deletar e criar registros - CRUD.
 
 no método POST podemos enviar no corpo da requisição um JSON
 
+```
 {
  query todosUsuarios {
   users()
  }
 }
+```
 
 E teremos aqui todos os usuários
 
 e na mesma query podemos passar mais de uma query.
 
+```
 {
  query todosUsuarios {
   users()
  }
+
  query todosProdutos {
   produtos()
  }
 }
+```
 
 Vai me trazer os usuários e produtos
 
@@ -89,12 +94,11 @@ Os três métodos são semânticos, mas é um padrão você sempre usar query pa
 
 Query e Mutation é o mais comum e mais utilizado para começar pois com ambos é que podemos fazer o CRUD básico até avançado.
 
-Podemos fazer múltiplas atualizacões, consultas na mesma requisição ao backend. Diferente da API Rest, no site howtographql mostra muito bem isso, veja
-
+Podemos fazer múltiplas atualizações, consultas na mesma requisição ao backend. Diferente da API Rest, no site [how-to-graphql](https://www.howtographql.com/basics/1-graphql-is-the-better-rest) mostra muito bem isso.
 
 
 posso fazer:
-
+``
 {
 	 mutation updateUser {
 		updateUser(id: 1) {
