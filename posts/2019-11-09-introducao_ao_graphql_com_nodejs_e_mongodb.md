@@ -382,115 +382,105 @@ yarn add mongoose
 E vou conectar com o mongodb no arquivo server.js:
 
 ```
-const { GraphQLServer } =  require("graphql-yoga");
-
-const path =  require("path");
-
-const resolvers =  require("./resolvers");
-
-const mongoose =  require("mongoose");
-
-  
+const { GraphQLServer } = require("graphql-yoga");
+const path = require("path");
+const resolvers = require("./resolvers");
+const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/graphqlnode", {
-
-useNewUrlParser:  true
-
+ useNewUrlParser: true
 });
 
-  
-
-const server =  new  GraphQLServer({
-
-typeDefs: path.resolve(__dirname, "schema.graphql"),
-
-resolvers
-
+const server = new GraphQLServer({
+ typeDefs: path.resolve(__dirname, "schema.graphql"),
+ resolvers
 });
-
-  
 
 server.start();
-
 ```
 
-
-E agora vou criar o Schema do Mongoose para o Ususário, então eu crio o arquivo src/User.js
-
+E agora vou criar o Schema do Mongoose para o User, então eu crio o arquivo src/User.js
 
 ```
-const mongoose =  require("mongoose");
-const UserSchema =  new  mongoose.Schema({
-
-name:  String,
-
-email:  String
-
+const mongoose = require("mongoose");
+const UserSchema = new mongoose.Schema({
+ name: String,
+ email: String
 });
 
- 
-module.exports  = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", UserSchema);
 ```
 
 E agora vou usar lá no resolver.js
 
+```
+const User = require("./User");
 
-const User =  require("./User");
+module.exports = {
+ Query: {
+  users: () => User.find(),
+  user: (root, {
+   id
+  }) => User.findById(id)
+ },
 
-  
-
-module.exports  = {
-
-Query: {
-
-users: () => User.find(),
-
-user: (root, { id }) => User.findById(id)
-
-},
-
-  
-
-Mutation: {
-
-createUser: (root, { name, email }) => User.create({ name, email })
-
-}
-
+ Mutation: {
+  createUser: (root, {
+   name,
+   email
+  }) => User.create({
+   name,
+   email
+  })
+ }
 };
 
-retirei o array, importei o Model de User e usei os métodos do mongoose para fazer as consultas e criar o usuário, aquele primeiro parametro root é o contexto do graphql, e o segundo parametro é o que vem dos parametros enviados nas queries e mutations que possuem parametros.
+```
+
+Retirei o array, importei o Model de User e usei os métodos do mongoose para fazer as consultas e criar o usuário, aquele primeiro parâmetro root é o contexto do graphql, e o segundo parâmetro é o que vem dos parâmetros enviados nas queries e mutations que possuem parametros.
 
 Simples assim, está pronto a API Graphql fornecendo para o frontend que seja os dados do usuário.
-
 
 Pronto, agora só rodar o servidor e abrir o localhost para testar, se fizer a consulta vai retornar um array vazio pos não temos nada no banco de dados.
 
 Só usar a mutation.
 
-Podemos criar queries namemes, consultas nomeadas:
+Podemos criar queries named (consultas nomeadas):
 
-
-
- query myNamedQuery {
-   users{
-    id
-    name
-    email
-  }
+```
+query myNamedQuery {
+ users {
+  id name email
+ }
 }
-
 mutation createNewUser {
-  createUser(name:"Joao", email: "jo@gmail.com") {
-    name
-    id
-  }
+ createUser(name: "Joao", email: "jo@gmail.com") {
+  name id
+ }
 }
+```
+
+
+Código fonte: [https://github.com/tgmarinho/graphql-node-blog](https://github.com/tgmarinho/graphql-node-blog)
   
-Fim do tutorial
+
+## Imagens do Graphqlcool rodando na minha máquina
+
+* Observa a documentação e o schema que ele nos mostra
+
+![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print1.png)
 
 
-## Quero mais
+![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print2.png)
+
+
+![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print3.png)
+
+
+Fim do tutorial.
+
+
+## Quer mais?!
 
 * [http://graphql.org/](http://graphql.org/)
 
@@ -504,12 +494,9 @@ Fim do tutorial
 
 
 ## Referência
+
 * [O vídeo mais didático para explicar sobre Graphql com NodeJS por Diego Fernandes da Rocketseat que já assisti em pt-br](https://www.youtube.com/watch?v=oD8GqurXZ-0)
 
 
-
-
-
-
-
+Obrigado!
 
