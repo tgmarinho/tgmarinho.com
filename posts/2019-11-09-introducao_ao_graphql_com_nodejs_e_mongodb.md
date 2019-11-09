@@ -162,6 +162,7 @@ const server =  new  GraphQLServer({
 });
 
 server.start();
+
 ```
 
 Dessa maneira o server já funciona. Mas precisamos definir as rotas.
@@ -356,6 +357,7 @@ Para pegar o usuário com id:
 ```
 
 E também podemos chamas as mutations:
+
 ``
 mutation {
   createUser(name: "Thiago", email: "tg@gmail.com"){
