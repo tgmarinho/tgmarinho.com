@@ -246,32 +246,33 @@ Voltando para analogia, temos mais uma vez se o typeDefs ou o schema é a rota, 
 Então vamos criar o resolver na pasta `src/resolvers.js`:
 
 ```
+module.exports = {
 
+ Query: {
 
+ },
+
+ Mutation: {
+
+ }
+
+}
 ```
 
 Temos as queries e mutation então vamos criar um resolver para query e outro para mutation.
 
-module.exports  = {
+```
+module.exports = {
+ Query: {
+  users: () => {},
+  user: () => {}
+ },
 
-Query: {
-
-users: () => {},
-
-user: () => {}
-
-},
-
-  
-
-Mutation: {
-
-createUser: () => {}
-
-}
-
+ Mutation: {
+  createUser: () => {}
+ }
 };
-
+```
 
 Pronto para cada query e mutation definido no schema temos que ter o resolver, o schema só declara o tipo e é usado para consulta, mas quem realiza a consulta de fato é o resolver, o resolver pode ser implemetado de qualquer forma pode buscar uma api, no banco de dados sql com postgres com mongo db, etc. E o legal q o schema só defini o que u usuário quer, e o resolver q se resolva para trazer isso conforma o esquema descrito ou seja conforme as regras e tipos definitos no schema. Veja bem,  o resolve pode buscar uma tonelada de dados, mas o que realmente importa e o que vai para o usuário é o que está defintido no tipo (typeDef) ou seja no schema.graphql. Se eu retorno do resolver um dado a mais q não está definido no tipo o grapqhal nao vai trazer para o usuário inclusive esse é um erro comum de implemtar o backend, vc colocar no resolver para trazaer um dado, mas ele nao aparece na tela e vc vai ver q esqueceu de ter definido no schema. Schema é a regra e a regra é clara, "se tá, tá se não tá não tá"! Bora voltar para o código.
 
