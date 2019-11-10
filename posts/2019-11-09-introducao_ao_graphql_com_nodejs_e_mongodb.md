@@ -99,7 +99,7 @@ Podemos fazer múltiplas atualizações, consultas na mesma requisição ao back
 
 Posso fazer:
 
-``
+```
 {
  mutation updateUser {
   updateUser(id: 1) {
@@ -108,7 +108,7 @@ Posso fazer:
   query users {}
  }
 }
-``
+```
 
 No exemplo acima estou atualizado o nome do usuário de id: 1 para Thiago e na segunda estou trazendo todos os usuários.
 
