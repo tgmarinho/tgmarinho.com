@@ -99,7 +99,7 @@ Podemos fazer múltiplas atualizações, consultas na mesma requisição ao back
 
 Posso fazer:
 
-``
+```
 {
  mutation updateUser {
   updateUser(id: 1) {
@@ -108,7 +108,7 @@ Posso fazer:
   query users {}
  }
 }
-``
+```
 
 No exemplo acima estou atualizado o nome do usuário de id: 1 para Thiago e na segunda estou trazendo todos os usuários.
 
@@ -197,7 +197,7 @@ type User {
   name: String!
   email: String!
 }
-``
+```
 
 `users`: retorna um array de `User`, e veja que `user` é um tipo, é um formato de como os dados devem chegar com o tipo e nome. esses tipos não são necessariamente os tipos e variáveis do banco de dados, esse é como os tipos tem que ser disponibilizados no Graphql, vai ter alguém que resolve isso ai. 
 
@@ -358,14 +358,14 @@ Para pegar o usuário com id:
 
 E também podemos chamas as mutations:
 
-``
+```
 mutation {
   createUser(name: "Thiago", email: "tg@gmail.com"){
     id
     name
   }
 }
-``
+```
 
 Veja como é rápido e produtivo, muito mais rápido que testar com API Rest usando Insomnia.
 
