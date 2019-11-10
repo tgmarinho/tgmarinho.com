@@ -443,9 +443,9 @@ Retirei o array, importei o Model de User e usei os métodos do mongoose para fa
 
 Simples assim, está pronto a API Graphql fornecendo para o frontend que seja os dados do usuário.
 
-Pronto, agora só rodar o servidor e abrir o localhost para testar, se fizer a consulta vai retornar um array vazio pos não temos nada no banco de dados.
+Pronto, agora só rodar o servidor e abrir o localhost para testar, se fizer a consulta vai retornar um array vazio pois não temos nada no banco de dados.
 
-Só usar a mutation.
+Só usar a mutation para criar os novos usuários no banco de dados e começar a fazer suas consultas.
 
 Podemos criar queries named (consultas nomeadas):
 
