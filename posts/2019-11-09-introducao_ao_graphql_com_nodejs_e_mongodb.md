@@ -476,11 +476,6 @@ Código fonte: [https://github.com/tgmarinho/graphql-node-blog](https://github.c
 ![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print2.png)
 
 
-![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print3.png)
-
-
-Fim do tutorial.
-
 
 ## Quer mais?!
 
