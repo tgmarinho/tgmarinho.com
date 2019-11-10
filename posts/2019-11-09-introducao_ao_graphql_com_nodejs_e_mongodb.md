@@ -443,9 +443,9 @@ Retirei o array, importei o Model de User e usei os métodos do mongoose para fa
 
 Simples assim, está pronto a API Graphql fornecendo para o frontend que seja os dados do usuário.
 
-Pronto, agora só rodar o servidor e abrir o localhost para testar, se fizer a consulta vai retornar um array vazio pos não temos nada no banco de dados.
+Pronto, agora só rodar o servidor e abrir o localhost para testar, se fizer a consulta vai retornar um array vazio pois não temos nada no banco de dados.
 
-Só usar a mutation.
+Só usar a mutation para criar novos usuários e começar a fazer as suas consultas.
 
 Podemos criar queries named (consultas nomeadas):
 
@@ -472,9 +472,7 @@ Código fonte: [https://github.com/tgmarinho/graphql-node-blog](https://github.c
 
 ![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print1.png)
 
-
 ![](https://raw.githubusercontent.com/tgmarinho/graphql-node-blog/master/screenshots/graphql_print2.png)
-
 
 
 ## Quer mais?!
@@ -492,7 +490,7 @@ Código fonte: [https://github.com/tgmarinho/graphql-node-blog](https://github.c
 
 ## Referência
 
-* [O vídeo mais didático para explicar sobre Graphql com NodeJS por Diego Fernandes da Rocketseat que já assisti em pt-br](https://www.youtube.com/watch?v=oD8GqurXZ-0)
+* [O vídeo mais didático para explicar sobre Graphql com NodeJS por Diego Fernandes da Rocketseat](https://www.youtube.com/watch?v=oD8GqurXZ-0)
 
 
 Obrigado!
