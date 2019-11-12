@@ -6,7 +6,7 @@ image: /assets/img/react-native-header.png
 category: mobile
 background: '#03A9F4'
 ---
-When you to need to install some dependence in your project you can use:
+When you need to install some dependence in your project you can use:
 
 ```
 npx --ignore-existing ....
