@@ -1,6 +1,6 @@
 ---
-title: How to install React Native with Typescript without React Native CLI
-description: I'll show how to install React Native with Typescript without React Native CLI
+title: How to install React Native with Typescript
+description: I'll show how to install React Native with Typescript
 date: '2019-11-12 08:36:34'
 image: /assets/img/react-native-header.png
 category: mobile
