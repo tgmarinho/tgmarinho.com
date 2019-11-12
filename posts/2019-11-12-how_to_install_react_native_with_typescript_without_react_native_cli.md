@@ -59,6 +59,6 @@ or
 cd MyApp && yarn android 
 ```
 
-For install in th ios simulator or android emulator.
+For install in the ios simulator or android emulator.
 
 credit: [Image](https://medium.com/reactbrasil/quais-desafios-vou-enfrentar-ao-come%C3%A7ar-um-app-com-react-native-a456db89c081)
