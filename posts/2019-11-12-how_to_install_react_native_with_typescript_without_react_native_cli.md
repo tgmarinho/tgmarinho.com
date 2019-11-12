@@ -31,14 +31,11 @@ yarn global add @react-native-community/cli
 And nothing worked for me, then I saw this answer:
 <https://github.com/react-native-community/react-native-template-typescript/issues/80#issuecomment-536419979>
 
-So, I googled about `npx --ignore-existing `
+So, I googled about `npx --ignore-existing`
 
 and I got this:
 
 > \--ignore-existing - If this flag is set, npx will not look in $PATH , or in the current package's node_modules/.bin for an existing version before deciding whether to install. Binaries in those paths will still be available for execution, but will be shadowed by any packages requested by this install.
->
-> \
->
 >
 > from: https://www.npmjs.com/package/npx
 
@@ -49,6 +46,22 @@ npx --ignore-existing react-native init MyApp --template react-native-template-t
 ```
 
 And it works \o/! But it expend more time, because it grab all content in the Internet, doesn't look for your cache files.
+
+Now your project React Native will be installed without problem, you can  run:
+
+```
+cd MyApp && yarn ios 
+```
+
+or
+
+```
+cd MyApp &&yarn android 
+```
+
+
+
+For install in th ios simulator or android emulator.
 
 
 
