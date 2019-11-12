@@ -6,15 +6,15 @@ image: /assets/img/react-native-header.png
 category: mobile
 background: '#03A9F4'
 ---
-When you need install some dependence in your project you can use:
+When you need to install some dependence in your project you can use:
 
 ```
 npx --ignore-existing ....
 ```
 
-Its allow you get the new version from npm package without look for your node_modules/bin that was installed in your operational system.
+It allows you to get the new version from npm package without look for your node_modules/bin that was installed in your operational system.
 
-I was trouble with that when I attempt install React Native with Typescript! 
+I had issues with that when I attempt to install React Native with Typescript! 
 
 I tried:
 
@@ -45,9 +45,9 @@ Then, I tried:
 npx --ignore-existing react-native init MyApp --template react-native-template-typescript
 ```
 
-And it works \o/! But it expend more time, because it grab all content in the Internet, doesn't look for your cache files.
+And it works \o/! But it spends more time because it grabs all content on the Internet, doesn't look for your cache files.
 
-Now your project React Native will be installed without problem, you can  run:
+Now your project React Native will be installed without a problem, you can run:
 
 ```
 cd MyApp && yarn ios 
