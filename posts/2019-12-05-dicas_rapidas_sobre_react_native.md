@@ -8,7 +8,7 @@ image: /assets/img/mobile_dev.png
 category: mobile
 background: '#03A9F4'
 ---
-****[**React Native**](https://facebook.github.io/react-native/) ****trata-se de criar interfaces de aplicações móveis.
+[React Native](https://facebook.github.io/react-native/) trata-se de criar interfaces de aplicações móveis.
 
 Sim, o app se integra com GPS (geolocalização),  mostra mapa na tela, usa alguns sensores do celular, se integra com Redux para gerenciar estados globais, busca dados da API externa, faz várias coisas legais e até complexas, mas tudo se trata de **UI** (Interface Gráfica do Usuário).
 
@@ -20,7 +20,7 @@ Portanto a primeira **regra** é:
 
 Interface bonita é mais importante do que tudo estar funcionando. É muito importante que a interface seja muito bonita para manter os usuários engajados no aplicativo.
 
-Se vc não manja de Design, use [React Native Paper](https://github.com/callstack/react-native-paper) (que ele usa Material Design), fuja do [Native Base](https://nativebase.io/)  pq é verboso d+,  e tente [React Native Elements](https://react-native-elements.github.io/react-native-elements/) que é legalzinho, mas o _**Paper**_ é o melhor dentre os três. O melhor mesmo é você estilizar seguindo um protótipo de um designer, eu fiz isso nesse app: <https://github.com/tgmarinho/BmiCalculatorRN> eu segui o design do [dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
+Se vc não manja de Design, use [React Native Paper](https://github.com/callstack/react-native-paper) (que ele usa Material Design), fuja do [Native Base](https://nativebase.io/)  pq é verboso d+,  e tente [React Native Elements](https://react-native-elements.github.io/react-native-elements/) que é legalzinho, mas o **_Paper_** é o melhor dentre os três. O melhor mesmo é você estilizar seguindo um protótipo de um designer, eu fiz isso nesse app: <https://github.com/tgmarinho/BmiCalculatorRN> eu segui o design do [dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
 
 ## **Expo x CLI**
 
