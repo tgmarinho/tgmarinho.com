@@ -20,7 +20,7 @@ Portanto a primeira **regra** é:
 
 Interface bonita é mais importante do que tudo estar funcionando. É muito importante que a interface seja muito bonita para manter os usuários engajados no aplicativo.
 
-Se vc não manja de Design, use [React Native Paper](https://github.com/callstack/react-native-paper) (que ele usa Material Design), fuja do [Native Base](https://nativebase.io/)  pq é verboso d+,  e tente [React Native Elements](https://react-native-elements.github.io/react-native-elements/) que é legalzinho, mas o **_Paper_** é o melhor dentre os três. O melhor mesmo é você estilizar seguindo um protótipo de um designer, eu fiz isso nesse app: <https://github.com/tgmarinho/BmiCalculatorRN> eu segui o design do [dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
+Se vc não manja de Design, use [React Native Paper](https://github.com/callstack/react-native-paper) (que ele usa Material Design), fuja do [Native Base](https://nativebase.io/)  pq é verboso d+,  e tente [React Native Elements](https://react-native-elements.github.io/react-native-elements/) que é legalzinho, mas o _**Paper**_ é o melhor dentre os três. O melhor mesmo é você estilizar seguindo um protótipo de um designer, eu fiz isso nesse app: <https://github.com/tgmarinho/BmiCalculatorRN> eu segui o design do [dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
 
 ## **Expo x CLI**
 
@@ -37,6 +37,14 @@ Como se trata de interface, podemos usar um [Storybook](https://storybook.js.org
 Quer se especializar em RN, então estude sobre construção de interface de usuários (UI) e acessibilidade. Saber bem HTML, CSS ajuda muito, ainda mais se você usar a biblioteca [styled-components](https://www.styled-components.com/) que funciona para React Native, é um ganho em produtividade, pois irá reaproveitar muito o seu conhecimento da web.
 
 Para fazer um mesmo componente com características diferentes em relação aos ambientes iOS e Android é bem fácil, basta mudar o o nome para `index.android.js` para o Android e `index.ios.js` para iOS, e o aplicativo saberá na hora de criar um build separar o que é do Android e o que é do iOS. Veja um exemplo:[ https://github.com/tgmarinho/gobarberRN/tree/master/src/components/DateInput](https://github.com/tgmarinho/gobarberRN/tree/master/src/components/DateInput). Veja o DatePicker no iOS: <https://youtu.be/mGDstIZzmQs?t=17> 
+
+
+
+## Configuração de Ambiente
+
+É uma dor no React Native configurar ambiente em máquina Linux e Windows, no Macbook é chatinho mas é bem mais rápido pela facilidade da própria arquitetura do macOS. Mas a Rocketseat elaborou uma doc muito boa em português e ainda colocaram algumas experiências para resolver alguns problemas de iniciantes. Confira: <https://docs.rocketseat.dev/>
+
+
 
 ## Leia a DOC do React Native
 
