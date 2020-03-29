@@ -16,20 +16,23 @@ Existem três tipos de parâmetros, dois deles utilizados no método GET e um no
 
 ### Query & Route Params
 
-_**[Query params](https://en.wikipedia.org/wiki/Query_string)**_ recebe os dados da requisição como parâmetro na URL, pode conter 1 ou mais parâmetros.
+[Query params](https://en.wikipedia.org/wiki/Query_string) recebe os dados da requisição como parâmetro na URL, pode conter 1 ou mais parâmetros.
 
 Exemplo: 
-```http://minhaapi.com/movies?name=transformes&duration=2&actor=octimusprime```
-
+```
+http://minhaapi.com/movies?name=transformes&duration=2&actor=octimusprime
+```
 
 _**Route params**_ recebe os dados da requisição na rota, é a melhor maneira para buscar algo, deletar ou atualizar por ID, por exemplo:
 
 ```
 GET http://minhaapi.com/movies/1 
 ```
+
 ```
 DELETE http://minhaapi.com/movies/1 
 ```
+
 ```
 PUT http://minhaapi.com/movies/1 
 ```
@@ -46,20 +49,20 @@ Ambos mudam a forma de escrever o código, veja:
 * Request Body = { "name": "Thiago" }
 */
   
-// Query params = ?teste=1
-// fazer a requisição no navegador: http://localhost:3333/teste/?nome=Thiago
-server.get("/teste", (req, res) => {
-const nome = req.query.nome;
-	return res.json({ message:  `Hello ${nome}` });
+// Query params = ?name=thiago
+// fazer a requisição no navegador: http://localhost:3333/users/?name=Thiago
+server.get("/users", (req, res) => {
+  const name = req.query.name;
+	return res.json({ message:  `Hello ${name}` });
 });
 
 
-// Route params = /users/1
+// Route Params = /users/1
 // fazer a requisição no navegador: http://localhost:3333/users/1
 server.get("/users/:id", (req, res) => {
 // const id = req.params.id;
 const { id } = req.params; // desestruturado com ES06
-	return res.json({ message:  `Buscando o usuário de ID: ${id}` });
+	return res.json({ message:  `Buscando o usuário de ID: ${id}`});
 });
 
 ```
@@ -80,16 +83,24 @@ POST
 E no controller vc pega a requisição para salvar os dados no banco de dados.
 
 ```
-async create(request, response) {
-    const { name, age, email } = request.body;
+server.post("/users", (req, res){
+    const { name, age, email } = req.body;
 
     await connection("users").insert({ name, age, email });
 
-    return response.json({ id });
+    return res.json({ id });
  }
 ```
 
 Objetivo foi mostrar as diferenças e também dar os devidos exemplos.
+
+Quando surgir a dúvida de qual é qual, basta voltar aqui no post.
+
+Resumindo:
+
+Query Param: vc vai usar ```?name=thiago&lastname=oliveira```
+
+Route Param: vc vai usar ```/users/1```
 
 
 
