@@ -89,6 +89,7 @@ async create(request, response) {
  }
 ```
 
-Fim.
+Objetivo foi mostrar as diferenças e também dar os devidos exemplos.
+
 
 
