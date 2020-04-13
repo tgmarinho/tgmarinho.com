@@ -6,42 +6,24 @@ image: /assets/img/github-social-code.jpeg
 category: git
 background: '#7D669E'
 ---
-If you have named a branch incorrectly AND pushed this to the remote repository follow these steps before any other developers get a chance to jump on you and give you shit for not correctly following naming conventions.
+Se você criou uma branch com nome errada ou simplesmente quiser alterar o nome da branch, é possível.
 
+## Renomeando sua branch local:
 
+Se você já estiver na branch local:
 
-1. Rename your local branch.
+`git branch -m novo-nome-da-branch`
 
-If you are on the branch you want to rename:
+Se você estiver em outra branch e quiser alterar uma outra:
 
+`git branch -m branch-que-quero-alterar novo-nome-da-branch-que-quero-alterar`
 
+Deletando a branch remota  antiga e enviando com o novo nome.
 
-1
+`git push origin :nome-antigo novo-nome`
 
-git branch -m new-name
+Mudando a branch para remota para com o nome da branch local
 
-If you are on a different branch:
+`git push origin -u novo-nome`
 
-
-
-1
-
-git branch -m old-name new-name
-
-2. Delete the old-name remote branch and push the new-name local branch.
-
-
-
-1
-
-git push origin :old-name new-name
-
-3. Reset the upstream branch for the new-name local branch.
-
-Switch to the branch and then:
-
-
-
-1
-
-git push origin -u new-name
+**\#git #github**
