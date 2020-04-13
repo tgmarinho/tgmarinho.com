@@ -1,6 +1,6 @@
 ---
 title: Renomeando a Branch no Git
-description: Comandos para poder renomear uma branch local no repositório git
+description: Comandos para poder renomear uma branch local no repositório github
 date: '2020-04-13 05:50:50'
 image: /assets/img/github-social-code.jpeg
 category: git
