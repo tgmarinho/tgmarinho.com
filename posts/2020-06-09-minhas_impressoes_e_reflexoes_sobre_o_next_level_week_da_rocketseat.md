@@ -51,5 +51,3 @@ Link do projeto: [Ecoleta](https://github.com/tgmarinho/Ecoleta)
 ![](/assets/img/banner.png)
 
 _Créditos a imagem: é um extra que foi fornecido na #NLW._
-
-__
