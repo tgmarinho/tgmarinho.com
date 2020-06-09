@@ -1,11 +1,6 @@
 ---
-title: Minhas impressões e reflexões sobre o Next Level Week da Rocketseat
-description: >-
-  Na primeira Next Level Week, mais do que fazer um app bonitão, com código
-  muito massa e bem organizado, fullstack (javascript, typescript, node, react,
-  react native, css, html, npm, github, axios, express, celebrate, joi, knex,
-  sqlite3, figma… uffaaa)! Fiquei também com algumas lições não técnicas, que
-  quero compartilhar com vocês.
+title: Primeira Next Level Week da Rocketseat
+description: Minhas impressões e reflexões sobre o Next Level Week da Rocketseat
 date: '2020-06-07 11:49:51'
 image: /assets/img/1920x1080.jpg
 category: misc
