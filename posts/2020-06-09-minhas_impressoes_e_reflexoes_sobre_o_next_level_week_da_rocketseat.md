@@ -22,7 +22,7 @@ Achei legal o que [**Diego**](https://blog.rocketseat.com.br/author/diego/) falo
 
 💻  Se seu objetivo é ser **desenvolvedor web**, iniciante ou quer migrar de carreira, **Javascript é uma ótima opção**. Todas as tecnologias têm vantagens e desvantagens, resolvem algum problema específico, tem mercado e salários em diversos níveis.
 
-Não pense apenas em nível de cidade, estado ou país. Pense de forma **global**, em qualquer lugar do **mundo** vai ter alguém precisando de uma sistema **web** ou **mobile**! _**Essa é a dica de ouro**_. 
+Não pense apenas em nível de cidade, estado ou país. Pense de forma **global**, em qualquer lugar do **mundo** vai ter alguém precisando de uma sistema **web** ou **mobile**! **_Essa é a dica de ouro_**. 
 
 Título de exemplo, se você escolher ser **desenvolvedor mobile 📱**:
 
@@ -48,10 +48,8 @@ Essa semana foi incrível de tantos aprendizados, o **aprendizado é contínuo,*
 
 Link do projeto: [Ecoleta](https://github.com/tgmarinho/Ecoleta)
 
-
-
 ![](/assets/img/banner.png)
 
-_Créditos a imagem: é um extras que foi fornecido na #NLW._
+_Créditos a imagem: é um extra que foi fornecido na #NLW._
 
 __
