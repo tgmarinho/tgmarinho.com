@@ -37,7 +37,7 @@ NaN ? console.log("truthy") : console.log("falsy")
 "" ? console.log("truthy") : console.log("falsy")
 ```
 
-* 0n is BigInt notation.
+**0n is BigInt notation.**
 
 Running the code above we'll get falsy for all of them.
 
@@ -165,7 +165,7 @@ Do you know the  **difference between**  these two words:  **True**  vs  **Truth
 
 I hope you like it! Give me a feedback bellow! ♥️
 
-** Always there something to learn! ** 
+**Always there something to learn!** 
 
 *Boost yourself.* 🚀
 
