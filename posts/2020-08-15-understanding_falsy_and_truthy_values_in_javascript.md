@@ -11,7 +11,7 @@ background: '#D6BA32'
 
 Let´s see in the practice with some codes the importance to know and apply these concepts.
 
-This post was translated for English and adapted, you can read in Portuguese at Blog Rocketseat. All the credits for them, it's an amazing IT School.
+This post was translated for English and adapted, [you can read in Portuguese at Blog Rocketseat](https://blog.rocketseat.com.br/entendendo-falsy-e-truthy-no-javascript/).  All the credits for [them](https://rocketseat.com.br/), it's an amazing IT School.
 
 ### Falsy
 
@@ -77,7 +77,7 @@ console.log({}  ===  []);  // even bigger false because compare value and type
 
 The object `{}` not is an array `[]`.
 
-### Getting a valuue falsy and truthy
+### Getting a value falsy and truthy
 
 For getting a falsy and truthy value by type coersion we can use `!!`.
 
@@ -163,10 +163,9 @@ Do you know the  **difference between**  these two words:  **True**  vs  **Truth
 -   [https://developer.mozilla.org/pt-BR/docs/Glossario/Truthy](https://developer.mozilla.org/pt-BR/docs/Glossario/Truthy)
 -   [https://medium.com/coding-at-dawn/what-are-falsy-values-in-javascript-ca0faa34feb4](https://medium.com/coding-at-dawn/what-are-falsy-values-in-javascript-ca0faa34feb4)
 
-I hope you like it! Give me a feedback bellow!
+I hope you like it! Give me a feedback bellow! ♥️
 
-Always there something to learn! 
+** Always there something to learn! ** 
 
-Boost yourself.
+*Boost yourself.* 🚀
 
-Read in PT_BR here.
