@@ -71,7 +71,7 @@ For instance:
 
 ```
 console.log({}  ==  []);  // false 
-console.log({}  ===  []);  // even bigger false because compare value and type
+console.log({}  ===  []);  // It's even falser because compare value and type
 ```
 
 The object `{}` not is an array `[]`.
