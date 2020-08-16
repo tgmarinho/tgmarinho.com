@@ -2,15 +2,15 @@
 title: Understanding Falsy and Truthy values in JavaScript
 description: >-
   Both concepts are very common and essential for JavaScript Developers. They
-  are very used in Back-end and Front-end Apps.
+  are widely used in Back-end and Front-end Apps.
 date: '2020-08-15 11:00:56'
 image: /assets/img/fasly-and-truthy.jpg
 category: js
 background: '#D6BA32'
 ---
-Let´s see in the practice with some codes the importance to know and apply these concepts.
+Let´s see in the practice, with some codes the importance of knowing and applying these concepts.
 
-This post was translated for English and adapted, [you can read in Portuguese at Blog Rocketseat](https://blog.rocketseat.com.br/entendendo-falsy-e-truthy-no-javascript/).  All the credits for [them](https://rocketseat.com.br/), it's an amazing IT School.
+This post was translated into English and adapted, [you can read it in Portuguese on Blog Rocketseat](https://blog.rocketseat.com.br/entendendo-falsy-e-truthy-no-javascript/). All the credits to [them](https://rocketseat.com.br/), it's an amazing IT School.
 
 ## Falsy
 
@@ -36,17 +36,17 @@ NaN ? console.log("truthy") : console.log("falsy")
 "" ? console.log("truthy") : console.log("falsy")
 ```
 
-**0n is BigInt notation.**
+*0n is BigInt notation.*
 
-Running the code above we'll get falsy for all of them.
+When running the code above we'll get falsy for all of them.
 
 ## Truthy
 
-Different from Falsy, Truthy values are something evaluated as true in the coercion process.
+It's different from Falsy, Truthy value is something evaluated as true in the coercion process.
 
 All values are truthy, except the values evaluated as a falsy, obviously.
 
-You can see bellow some samples:
+You can see some samples bellow:
 
 ```
 console.log("Some truthy values") 
@@ -78,7 +78,7 @@ The object `{}` not is an array `[]`.
 
 ## Getting a value falsy and truthy
 
-For getting a falsy and truthy value by type coercion we can use `!!`.
+In order to get a falsy and truthy value by typing coercion we can use `!!`.
 
 Example:
 
@@ -87,13 +87,13 @@ Example:
  console.log(!!"");  // empty string is falsy
 ```
 
-Alert: Be careful! If the user type some white space in the form, it can break the validation.
+Alert: Be careful! If the user types some white space in the form, it can break the validation.
 
 ```
 console.log(!!" ".trim());  // now is false!!!
 ```
 
-## Real world samples
+## Real-world samples
 
 If the array is empty, then render the `<p>`.
 
@@ -106,7 +106,7 @@ The number 0 is falsy.
 
 Another example:
 
-Render the `div` with title, but only render the description if the string is truthy:
+Render the `div` with title, but it only renders the description if the string is truthy:
 
 ```
 <div>  
@@ -120,17 +120,17 @@ Here we can see the coercion of types in the practice.
 
 message.description is a String, with the operator !!message.description I'm getting the falsy or truthy value.
 
-If the String description is false, the condition stop. If is true, continue the operation and show the `<p>{message.description}</p>`.
+If the String description is false, the condition stops. If it is true, it will continue the operation and show the `<p>{message.description}</p>`.
 
-Let's see the other example:
+Let's see another example:
 
 ```
 if(password && !old_password) {  
-   throw  new  Error('Precisa informar a senha antiga para para criar uma nova.');
+   throw  new  Error('You need to inform the password and old password.');
 }
 ```
 
-See, password and old_passowrd are String, if the password is filled (true) and !old_password is not, then, pass in the condition and throw an error for the user.
+See, password and `old_passowrd` are strings, if the password is filled (true) and `!old_password` is not, then it passes the condition and it throws an error for the user.
 
 ```
 ""  // falsy  
@@ -143,13 +143,13 @@ if(token[1]  && user[1]) {
 }
 ```
 
-Check if position 1 from token and user array has values, if yes, pass in the condition and pass to the function setData as a parameter of the object.
-Interesting, if the value is present in these position are falsy, then the condition is no satisfied.
+Check if position 1 from token and user array has values, if yes, it passes the condition and it passes to the function setData as a parameter of the object.
+Interesting, if the value is present in these positions, it is false, then the condition is not satisfied.
 
 
 ## 🏁 Conclusion
 
-These concepts together the programming logic will be used daily for developers in your careers! To Know falsy/truthy will helping to build React Applications or with all technology in the JavaScript ecosystem. 
+These concepts, along with programming logic will be used daily for developers in your careers! Knowing falsy/truthy will help to build React Applications or with all technology in the JavaScript ecosystem. 
 
 ## 🗽 What means true vs truthy
 
@@ -164,6 +164,8 @@ Do you know the  **difference between**  these two words:  **True**  vs  **Truth
 
 I hope you like it! Give me a feedback bellow! ♥️
 
-** Always there something to learn! ** 
+**Always there something to learn!** 
 
 *Boost yourself.* 🚀
+
+Thank you [teacher Lucas Pirani](https://www.instagram.com/teacher_lucas_pirani/) for reviewing my post!
