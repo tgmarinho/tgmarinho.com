@@ -87,7 +87,7 @@ Example:
  console.log(!!"");  // empty string is falsy
 ```
 
-Alert: Be careful! If the user type some whitespace in the form, it can break the validation.
+Alert: Be careful! If the user type some white space in the form, it can break the validation.
 
 ```
 console.log(!!" ".trim());  // now is false!!!
