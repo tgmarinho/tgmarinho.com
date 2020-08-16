@@ -83,7 +83,7 @@ For getting a falsy and truthy value by type coersion we can use `!!`.
 Example:
 
 ```
- console.log(!!" ");  // withwhite space is truthy
+ console.log(!!" ");  // with white space is truthy
  console.log(!!"");  // empty string is falsy
 ```
 
