@@ -78,7 +78,7 @@ The object `{}` not is an array `[]`.
 
 ## Getting a value falsy and truthy
 
-For getting a falsy and truthy value by type coersion we can use `!!`.
+For getting a falsy and truthy value by type coercion we can use `!!`.
 
 Example:
 
