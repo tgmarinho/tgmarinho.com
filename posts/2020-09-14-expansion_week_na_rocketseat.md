@@ -27,7 +27,7 @@ Na abertura do evento, o CEO da Rocketseat Robson Marques, CTO Diego Fernandes, 
 * O **aprendizado é continuo**, sempre estaremos aprendendo;
 * **Antes o conteúdo era escasso** o problema era encontrar conteúdo, tinha que se locomover fisicamente para acessar bibliotecas ir em bancas comprar revistas, etc;
 * Hoje o problema é o excesso de conteúdo, temos que **filtrar o conteúdo;**
-* Ter **mentores que indicam conteúdos**, pois os mesmo já investirem tempo buscando, filtrando e estudando. Eles sabem o que é bom e o que é ruim. Então chegar em alguém e falar: "_**Ei mentor, qual conteúdo você indica para criar um aplicativo de gerenciamento de pessoas, que funciona em iOS e Android, sendo que tenho só tenho noções de HTML, CSS e JavaScript?**_"
+* Ter **mentores que indicam conteúdos**, pois os mesmo já investirem tempo buscando, filtrando e estudando. Eles sabem o que é bom e o que é ruim. Então chegar em alguém e falar: "**_Ei mentor, qual conteúdo você indica para criar um aplicativo de gerenciamento de pessoas, que funciona em iOS e Android, sendo que tenho só tenho noções de HTML, CSS e JavaScript?_**"
 * Google é uma ferramenta incrível para fazer buscas, porém ele traz milhões de resultados e precisamos filtrar;
 * **Mentor não é alguém que sabe de tudo**, ele te ajuda em algo **pontual**, em sua habilidade e o mesmo pode te indicar outras pessoas para te ajudar;
 * **Fuja de mentores que ditam regras**, você precisa de **gente que te respeita**, te **inspira** e **te faz pensar**, um bom mentor na verdade vai te fazer várias **perguntas**! Para uma pergunta sua, espere recebe duas de seu mentor! E com isso a sua **cabeça vai começar a borbulhar** ;)
@@ -73,7 +73,7 @@ Thaíssa conversou com Zeno Rocha, autor do livro : [14 Hábitos de Desenvolvedo
 * Cuidado com burnout, excesso de trabalho
 * Cuidado com FOMO (_Fear Of Messing Out_) excesso de conteúdo, grupos de whatsapp, eventos;
 * Não precisa ler toda a Documentação da tecnologia para começar utilizar, aprenda sob demanda. Você não precisa e nem vai saber tudo;
-* Comece com _**get started**_ da tecnologia e vai avançando conforme vai sentindo necessidade;
+* Comece com **_get started_** da tecnologia e vai avançando conforme vai sentindo necessidade;
 * Mesmo depois de 10 anos de carreira você não irá saber tudo;
 * Um **SIM** são muitos **NÃOs**. Tipo se você falou sim para React Native, você falou não para Flutter, Swift, Kotlin, PhoneGap, Xamarin, etc.
 
@@ -355,7 +355,7 @@ COMO ACHAR MENTORES
 
 * Livros é um bom lugar para ter mentoria com o autor, ver os pontos de vistas
 * Mentoria Reversa - é ajudar alguém em alguma coisa e a pessoa me ajudar em outra.
-* Mentoria é te fazer o outro enxergar além, e não te obrigar a fazer algo e te cobrar!
+* Mentoria é fazer o outro enxergar além, e não te obrigar a fazer algo e te cobrar!
 * Não precisa ser formal
 * Pessoa q te respeita e respeita a sua opinao, se a pessoa te caga regra, ela te coloca em uma caixa, sai dessa pessoa, sai de perto dessa pessoa, ela é tóxica.
 * Senioridade em uma área, mas não em outras! Humildade sempre!
@@ -393,6 +393,6 @@ Foi uma live bem inspiradora!
 
 Uma semana recheada de insights e conhecimentos que com certeza vai levar a galera para um próximo nível!
 
-<iframe src="\\\[https://giphy.com/embed/xT0xeJpnrWC4XWblEk](https://giphy.com/embed/xT0xeJpnrWC4XWblEk)" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="\\\\[https://giphy.com/embed/xT0xeJpnrWC4XWblEk](https://giphy.com/embed/xT0xeJpnrWC4XWblEk)" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 Se quiser embarcar nesse foguete, se cadastra lá na [plataforma da Rocketseat](https://app.rocketseat.com.br/), é gratuito e com certeza vai curtir ;)
