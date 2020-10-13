@@ -353,7 +353,7 @@ COMO ACHAR MENTORES
 
 **ONDE ACHAR?**
 
-* Livros bons lugares para te mentora, ver os pontos de vistas
+* Livros é um bom lugar para ter mentoria com o autor, ver os pontos de vistas
 * Mentoria Reversa - é ajudar alguém em alguma coisa e a pessoa me ajudar em outra.
 * Mentoria é te fazer o outro enxergar além, e não te obrigar a fazer algo e te cobrar!
 * Não precisa ser formal
