@@ -204,7 +204,7 @@ https://dev.to/devteam/the-7-most-popular-dev-posts-from-the-past-week-a8o
 
 ### Criatividade
 
-Nessa live o Mayk Brito conversou com Tiago Luchtenberg (Design da Rocketseat) e Calebe Asafe (Designer e Publicitário)
+Nessa live o Mayk Brito conversou com Tiago Luchtenberg (UI Design da Rocketseat) e Calebe Asafe (Designer e Publicitário)
 
 * **Criatividade** está relacionada a se **inspirar** com algo que já existe
 * Descobrir o seu processo de obter criatividade;
