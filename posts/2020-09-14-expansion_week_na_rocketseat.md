@@ -360,16 +360,20 @@ COMO ACHAR MENTORES
 * Pessoa q te respeita e respeita a sua opinao, se a pessoa te caga regra, ela te coloca em uma caixa, sai dessa pessoa, sai de perto dessa pessoa, ela é tóxica.
 * Senioridade em uma área, mas não em outras! Humildade sempre!
 * Olhos de águia, sair da casinha
-* Como conseguir pessoas para ajuda?
+
+
+
+**Como conseguir pessoas para ajuda?**
+
 * Pede para as pessoas q ja tem um mentor, intermediar um bate papo através de referencia ou QI
 * Converse com pessoas experientes!
-* Converse pessoas em eventos!
+* Converse com pessoas em eventos!
 * Comunidade: [comunidade.tech](http://comunidade.tech/)
 * Não existem semi-deuses, dev é ser humano, com muita dedicação!!
-* Todos tem potencial!!! Vc soh precisa desenvolver!!!
+* Todos tem potencial!!! Vc só precisa desenvolver!!!
 * Reconhecer alguém é muito importante!
 
-Livros:
+**Livros**:
 
 * Why we sleep
 * Deep work (trabalho focado)
@@ -379,11 +383,11 @@ Livros:
 
 Nessa live o Diego conversou com Mayk Brito, Luiza Costa e Laura Beatris (Alumni do Bootcamp)
 
-Mas eu gostei bastante dessa live, pq a Laura respondeu na primeira pergunta que algo que ajudou ela a se desenvolver dentro do Bootcamp e fora: Disciplina! 
+Eu gostei bastante dessa live, pq a Laura respondeu na primeira pergunta que algo que ajudou ela a se desenvolver dentro do Bootcamp e fora: **Disciplina**! 
 
 Pode ser besteira, mas essa palavra aplicada no dia a dia ajuda demais! 
 
-E por isso que ela tem se destacado, se tornado mentora no Spacequad da Rocketseat e ter alcançados coisas bem legais logo no início de carreira.
+E por isso que ela tem se destacado, se tornado mentora no **Spacequad** da Rocketseat e tem alcançado coisas bem legais logo no início de carreira.
 
 Algo que marcou também foi o fato que ela ter criado um canal do YouTube e e se expor compartilhando coisas sobre programação em inglês mesmo não sendo perfeito segundo ela! Ela estava aprendendo em público e se desenvolvendo, arriscando e metendo a cara para alcancar seus objetivos! 
 
