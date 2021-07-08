@@ -1,5 +1,5 @@
 ---
-title: Renomeando uma Branch no Git
+title: Renomeando a Branch no Git
 description: >-
   Comandos para poder renomear uma branch local e remota no repositório
   git/github
